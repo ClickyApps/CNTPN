@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget 
+	xmlns = "http://www.w3.org/ns/widgets"
+	xmlns:gap   = "http://phonegap.com/ns/1.0"
+	id          = "uk.org.swmmnn.app"
+	version     = "1.2.3">
+	
+	<!-- App Details That Are Shown on the iOS App Store -->
+	<name>SWMMNN</name>
+	
+	<description>
+		Information about the Southern West Midlands Maternity and Newborn Network of hospitals. This app includes information for families of premature and sick babies, with key information about each hospital and unit available.
+	</description>
+	
+	<!-- Set Author of Application -->
+	<author href="http://www.clicky.co.uk" email="josh@clicky.co.uk">
+	  Clicky Media
+	</author>
+	
+	<preference name="orientation" value="portrait"/><!-- Set Default Orientation -->
+	<preference name="target-device" value="universal"/><!-- Set Device Targeting -->
+	<preference name="fullscreen" value="true"/><!-- Remove Status Bar for Android and Less Than iOS 7 -->
+	<preference name="disable-cursor" value="true"/><!-- Disable Cursor -->
+	<preference name="android-installLocation" value="auto"/><!-- Set Android Additonal Properties -->
+	<preference name="DisallowOverscroll" value="true"/><!-- Stop Overscrolling on Application -->
+	<preference name="webviewbounce" value="false"/><!-- Stop Screen Bounce on Scroll -->
+	
+	<!-- Disable All Rotations -->
+	<gap:config-file platform="ios" parent="UISupportedInterfaceOrientations" overwrite="true">
+	<array>
+	    <string>UIInterfaceOrientationLandscapeOmg</string>
+	</array>
+	</gap:config-file>
+	
+	<!-- Install InAppBrowser Plugin (Set Versions to Disallow Updates Which May Render Differently) -->
+	<gap:plugin name="org.apache.cordova.inappbrowser" version="0.3.3" />
+	
+	<!-- Install Status Bar Control Plugin - Removes Status Bar in iOS 7 (Set Versions to Disallow Updates Which May Render Differently) -->
+	<gap:plugin name="com.phonegap.plugin.statusbar" version="1.1.0" />
+	<preference name="StatusBarOverlaysWebView" value="false" />
+	<gap:config-file platform="ios" parent="UIStatusBarHidden">
+	    <true/>
+	</gap:config-file>
+	<gap:config-file platform="ios" parent="UIViewControllerBasedStatusBarAppearance">
+	    <false/>
+	</gap:config-file>
+	
+	<!-- Set WildCard Permissions - App Has Every Permission -->
+	<access origin="*" />
+	<preference name="permissions" value="none"/>
+	
+	<!-- Set Splash Screens -->
+	<gap:splash src="splash.png" />
+	<gap:splash src="splash/ios/Default.png" width="320" height="480" />
+	<gap:splash src="splash/ios/Default_at_2x.png" width="640" height="960" />
+	<gap:splash src="splash/ios/Default_iphone5.png" width="640" height="1136" />
+	<gap:splash src="splash/ios/Default-Landscape.png" width="1024" height="768" />
+	<gap:splash src="splash/ios/Default-Portrait.png" width="768" height="1024" />
+	
+	<!-- Set Icons -->
+	<icon src="Icon.png" gap:platform="ios" width="57" height="57" />
+	<icon src="Icon-72.png" gap:platform="ios" width="72" height="72" />
+	<icon src="Icon@2x.png" gap:platform="ios" width="114" height="114" />
+	<icon src="Icon-72@2x.png" gap:platform="ios" width="144" height="144" />
+
+</widget>

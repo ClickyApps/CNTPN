@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]>    <html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>SWMMNN</title>
+        <meta name="description" content="">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimal-ui">
+        <meta http-equiv="cleartype" content="on">
+        <link rel="apple-touch-icon" href="Icon-72@2x.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="Icon-72@2x.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="Icon@2x.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="Icon-72.png">
+        <link rel="apple-touch-icon-precomposed" href="Icon.png">
+        <link rel="shortcut icon" href="Icon-72@2x.png">
+
+        <meta name="msapplication-TileImage" content="img/touch/apple-touch-icon-144x144-precomposed.png">
+        <meta name="msapplication-TileColor" content="#222222">
+
+        <link rel="stylesheet" href="style.css">
+        <script src="js/vendor/jquery.js"></script>
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <script src="phonegap.js"></script>
+    </head>
+    <body class="home">
+    
+    	<img class="leftArrow" src="images/home-arrow-left.png" width="25"/>
+    	<img class="rightArrow" src="images/home-arrow-right.png" width="25"/>
+    	
+    	<div class="logo">
+    		<img src="images/home_logo.png" height="42"/>
+    	</div><!-- logo -->
+    	
+    	<h1>Information for families<br/>of premature and sick<br/>babies</h1>
+    	
+    	<p class="choose">First, please choose a language:</p>
+    	
+    	<div class="languageChoice">
+    		<a href="english/hospital-list.html" class="flag topLeft" id="english"></a>
+    		<a href="polish/hospital-list.html" class="flag topMiddle" id="polish"></a>
+    		<a href="urdu/hospital-list.html" class="flag topRight disabled" id="urdu"></a>
+    	</div><!-- languageChoice -->
+    	
+    	<div class="links">
+    		<p><a href="about-the-network.html" class="first">About the Southern West Midlands Maternity and Newborn Network</a></p>
+    		<p><a href="useful-information.html">Useful information</a></p>
+    	</div><!-- links -->
+    	
+    	<footer>
+    		<a href="#" onclick="var ref = window.open('http://www.swmmnn.org.uk/app/maps/network.pdf', '_system'); return false;" class="map"><img src="images/home_footer_map_icon.png" width="77"/></a>
+    		<a href="#" onclick="var ref = window.open('http://www.bliss.org.uk', '_system'); return false;"><img src="images/home_footer_bliss_logo.png" height="41"/></a>
+    	</footer>
+    	
+        <script src="js/vendor/zepto.min.js"></script>
+        <script src="js/helper.js"></script>
+        
+        <script type="text/javascript">
+        	$(function(){
+        		// Set Hospital to SWMMNN
+        		var chosenHospital = 'SWMMNN';
+				window.localStorage.setItem('chosenHospital',chosenHospital);
+				
+				// Upon Choosing Language
+				$('.home .languageChoice .flag').click(function(){
+					var chosenLanguage = $(this).attr('id');
+					window.localStorage.setItem('chosenLanguage',chosenLanguage);
+				});
+			});
+		</script>        
+
+    </body>
+</html>
