@@ -174,11 +174,12 @@ footer.tabs a.tab.active span { position: absolute; top: -20px; left: 0; width: 
 p.error { background: #fff; float: left; margin: 0; text-align: center; padding: 20px; padding-bottom: 10px; color: #F00; font-weight: bold; }
 
 .contentArea { padding: 22px 7%; padding-bottom: 50px; width: 86%; float: left; background: #fff; }
-.contentArea h3 { font-size: 18px; line-height: 24px; color: #2D7FAC; margin: 30px 0 15px 0; }
+.contentArea h3, .contentArea h3 a { font-size: 18px; line-height: 24px; color: #2D7FAC; margin: 30px 0 15px 0; }
+.contentArea h3 a { text-decoration: none; }
 .contentArea h3.first { margin-top: 0; }
 .contentArea h6 { font-size: 15px; line-height: 21px; color: #2D7FAC; margin: 0 0 15px 0; }
 .contentArea p { font-size: 12px; line-height: 18px; color: #3A4353; margin: 0 0 15px 0; }
-.contentArea p a { font-family: 'OpenBold'; color: #3A4353; text-decoration: none; }
+.contentArea p a{ font-family: 'OpenBold'; color: #3A4353; text-decoration: none; }
 .contentArea ul { list-style: none; padding: 0; margin: 10px 0 40px 0; }
 .contentArea ul li { font-size: 12px; line-height: 18px; color: #3A4353; margin: 0 0 10px 0; padding-left: 10px; }
 .contentArea ul li a { color: #3A4353; text-decoration: underline; }
