@@ -115,14 +115,12 @@ footer.tabs a.tab.active span { position: absolute; top: -20px; left: 0; width: 
 	.royal-derby-hospital footer.tabs a.tab.active span { border-bottom-color: #2C6EAE; }
 	.kettering-general-hospital footer.tabs a.tab.active { background-color: #74afaf; }
 	.kettering-general-hospital footer.tabs a.tab.active span { border-bottom-color: #74afaf; }
-
+	.kings-mill-hospital-mansfield footer.tabs a.tab.active { background-color: #beca59; }
+	.kings-mill-hospital-mansfield footer.tabs a.tab.active span { border-bottom-color: #beca59; }
+	.leicester-general-hospital footer.tabs a.tab.active { background-color: #d5a007; }
+	.leicester-general-hospital footer.tabs a.tab.active span { border-bottom-color: #d5a007; }
+	
 /*old*/
-
-	.worcester-hospital footer.tabs a.tab.active { background-color: #beca59; }
-	.worcester-hospital footer.tabs a.tab.active span { border-bottom-color: #beca59; }
-
-	.good-hope-hospital footer.tabs a.tab.active { background-color: #d5a007; }
-	.good-hope-hospital footer.tabs a.tab.active span { border-bottom-color: #d5a007; }
 
 	.redditch-hospital footer.tabs a.tab.active { background-color: #e54a66; }
 	.redditch-hospital footer.tabs a.tab.active span { border-bottom-color: #e54a66; }
@@ -167,10 +165,10 @@ footer.tabs a.tab.active span { position: absolute; top: -20px; left: 0; width: 
 .kettering-general-hospital .hospitalContainer a.feedback { background-color: #74afaf; }
 .kettering-general-hospital a.feedback span.arrow { border-right-color: #74afaf; }
 
-.worcester-hospital .hospitalContainer a.feedback { background-color: #beca59; }
-.worcester-hospital a.feedback span.arrow { border-right-color: #beca59; }
-.good-hope-hospital .hospitalContainer a.feedback { background-color: #d5a007; }
-.good-hope-hospital a.feedback span.arrow { border-right-color: #d5a007; }
+.kings-mill-hospital-mansfield .hospitalContainer a.feedback { background-color: #beca59; }
+.kings-mill-hospital-mansfield a.feedback span.arrow { border-right-color: #beca59; }
+.leicester-general-hospital .hospitalContainer a.feedback { background-color: #d5a007; }
+.leicester-general-hospital a.feedback span.arrow { border-right-color: #d5a007; }
 .redditch-hospital .hospitalContainer a.feedback { background-color: #e54a66; }
 .redditch-hospital a.feedback span.arrow { border-right-color: #e54a66; }
 .hereford-hospital .hospitalContainer a.feedback { background-color: #8b4583; }
@@ -221,8 +219,8 @@ body.feedback { background: #74aaaa url(images/icon_background.png) repeat; back
 body.feedback.queens-hospital-burton { background-color: #1a3566; }
 body.feedback.royal-derby-hospital { background-color: #2C6EAE; }
 body.feedback.kettering-general-hospital { background-color: #74afaf; }
-body.feedback.worcester-hospital { background-color: #beca59; }
-body.feedback.good-hope-hospital { background-color: #d5a007; }
+body.feedback.kings-mill-hospital-mansfield { background-color: #beca59; }
+body.feedback.leicester-general-hospital { background-color: #d5a007; }
 body.feedback.redditch-hospital { background-color: #e54a66; }
 body.feedback.hereford-hospital { background-color: #8b4583; }
 body.feedback.birmingham-childrens-hospital { background-color: #1b3566; }
@@ -232,8 +230,8 @@ body.feedback.birmingham-childrens-hospital { background-color: #1b3566; }
 .feedback.queens-hospital-burton .title h1 { color: #1a3566; }
 .feedback.royal-derby-hospital .title h1 { color: #2C6EAE; }
 .feedback.kettering-general-hospital .title h1 { color: #74afaf; }
-.feedback.worcester-hospital .title h1 { color: #beca59; }
-.feedback.good-hope-hospital .title h1 { color: #d5a007; }
+.feedback.kings-mill-hospital-mansfield .title h1 { color: #beca59; }
+.feedback.leicester-general-hospital .title h1 { color: #d5a007; }
 .feedback.redditch-hospital .title h1 { color: #e54a66; }
 .feedback.hereford-hospital .title h1 { color: #8b4583; }
 .feedback.birmingham-childrens-hospital .title h1 { color: #1b3566; }
@@ -241,8 +239,8 @@ body.feedback.birmingham-childrens-hospital { background-color: #1b3566; }
 .feedback.queens-hospital-burton .title h3 { color: #1a3566; }
 .feedback.royal-derby-hospital .title h3 { color: #2C6EAE; }
 .feedback.kettering-general-hospital .title h3 { color: #74afaf; }
-.feedback.worcester-hospital .title h3 { color: #beca59; }
-.feedback.good-hope-hospital .title h3 { color: #d5a007; }
+.feedback.kings-mill-hospital-mansfield .title h3 { color: #beca59; }
+.feedback.leicester-general-hospital .title h3 { color: #d5a007; }
 .feedback.redditch-hospital .title h3 { color: #e54a66; }
 .feedback.hereford-hospital .title h3 { color: #8b4583; }
 .feedback.birmingham-childrens-hospital .title h3 { color: #1b3566; }
@@ -264,8 +262,8 @@ body.feedback.birmingham-childrens-hospital { background-color: #1b3566; }
 .feedback.queens-hospital-burton #feedbackForm input[type=submit], .feedback.queens-hospital-burton #feedbackForm a#nextQuestions { color: #1a3566; }
 .feedback.royal-derby-hospital #feedbackForm input[type=submit], .feedback.royal-derby-hospital #feedbackForm a#nextQuestions { color: #2C6EAE; }
 .feedback.kettering-general-hospital #feedbackForm input[type=submit], .feedback.kettering-general-hospital #feedbackForm a#nextQuestions { color: #74afaf; }
-.feedback.worcester-hospital #feedbackForm input[type=submit], .feedback.worcester-hospital #feedbackForm a#nextQuestions { color: #beca59; }
-.feedback.good-hope-hospital #feedbackForm input[type=submit], .feedback.good-hope-hospital #feedbackForm a#nextQuestions { color: #d5a007; }
+.feedback.kings-mill-hospital-mansfield #feedbackForm input[type=submit], .feedback.kings-mill-hospital-mansfield #feedbackForm a#nextQuestions { color: #beca59; }
+.feedback.leicester-general-hospital #feedbackForm input[type=submit], .feedback.leicester-general-hospital #feedbackForm a#nextQuestions { color: #d5a007; }
 .feedback.redditch-hospital #feedbackForm input[type=submit], .feedback.redditch-hospital #feedbackForm a#nextQuestions { color: #e54a66; }
 .feedback.hereford-hospital #feedbackForm input[type=submit], .feedback.hereford-hospital #feedbackForm a#nextQuestions { color: #8b4583; }
 .feedback.birmingham-childrens-hospital #feedbackForm input[type=submit], .feedback.birmingham-childrens-hospital #feedbackForm a#nextQuestions { color: #1b3566; }
