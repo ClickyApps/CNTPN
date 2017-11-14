@@ -106,64 +106,78 @@ footer.tabs a.tab.visiting img { margin: 2px 0 2px 0; }
 footer.tabs a.tab.support img { margin: 6px 0; }
 footer.tabs a.tab.active { background: #74B0B0; height: 65px; }
 footer.tabs a.tab.active span { position: absolute; top: -20px; left: 0; width: 0; height: 0; border-left: 35px solid transparent; border-right: 35px solid transparent; border-bottom: 20px solid #74B0B0; }
-.birmingham-womens-hospital footer.tabs a.tab.active { background-color: #1a3566; }
-.city-hospital footer.tabs a.tab.active { background-color: #2C6EAE; }
-.heartlands-hospital footer.tabs a.tab.active { background-color: #74afaf; }
-.worcester-hospital footer.tabs a.tab.active { background-color: #beca59; }
-.good-hope-hospital footer.tabs a.tab.active { background-color: #d5a007; }
-.redditch-hospital footer.tabs a.tab.active { background-color: #e54a66; }
-.hereford-hospital footer.tabs a.tab.active { background-color: #8b4583; }
-.birmingham-childrens-hospital footer.tabs a.tab.active { background-color: #1b3566; }
-.birmingham-womens-hospital footer.tabs a.tab.active span { border-bottom-color: #1a3566; }
-.city-hospital footer.tabs a.tab.active span { border-bottom-color: #2C6EAE; }
-.heartlands-hospital footer.tabs a.tab.active span { border-bottom-color: #74afaf; }
-.worcester-hospital footer.tabs a.tab.active span { border-bottom-color: #beca59; }
-.good-hope-hospital footer.tabs a.tab.active span { border-bottom-color: #d5a007; }
-.redditch-hospital footer.tabs a.tab.active span { border-bottom-color: #e54a66; }
-.hereford-hospital footer.tabs a.tab.active span { border-bottom-color: #8b4583; }
-.birmingham-childrens-hospital footer.tabs a.tab.active span { border-bottom-color: #1b3566; }
+
+/* Hospitals Active Tab Colors */
+/*new*/
+	.queens-hospital-burton footer.tabs a.tab.active { background-color: #1a3566; }
+	.queens-hospital-burton footer.tabs a.tab.active span { border-bottom-color: #1a3566; }
+	.royal-derby-hospital footer.tabs a.tab.active { background-color: #2C6EAE; }
+	.royal-derby-hospital footer.tabs a.tab.active span { border-bottom-color: #2C6EAE; }
+
+/*old*/
+	.heartlands-hospital footer.tabs a.tab.active { background-color: #74afaf; }
+	.heartlands-hospital footer.tabs a.tab.active span { border-bottom-color: #74afaf; }
+
+	.worcester-hospital footer.tabs a.tab.active { background-color: #beca59; }
+	.worcester-hospital footer.tabs a.tab.active span { border-bottom-color: #beca59; }
+
+	.good-hope-hospital footer.tabs a.tab.active { background-color: #d5a007; }
+	.good-hope-hospital footer.tabs a.tab.active span { border-bottom-color: #d5a007; }
+
+	.redditch-hospital footer.tabs a.tab.active { background-color: #e54a66; }
+	.redditch-hospital footer.tabs a.tab.active span { border-bottom-color: #e54a66; }
+
+	.hereford-hospital footer.tabs a.tab.active { background-color: #8b4583; }
+	.hereford-hospital footer.tabs a.tab.active span { border-bottom-color: #8b4583; }
+
+	.birmingham-childrens-hospital footer.tabs a.tab.active { background-color: #1b3566; }
+	.birmingham-childrens-hospital footer.tabs a.tab.active span { border-bottom-color: #1b3566; }
 
 .hospital-list .hospitals { float: left; width: 100%; background: #eee; }
 .hospital-list .hospitals .hospital { background: #000 url(images/icon_background.png) repeat; background-size: 155px 105px; -webkit-background-size: 155px 105px; -moz-background-size: 155px 105px; -o-background-size: 155px 105px; width: 50%; height: 59px; padding: 19px 0; text-decoration: none; float: left; cursor: pointer; }
 .hospital-list .hospitals .hospital:hover { opacity: 0.9; }
 .hospital-list .hospitals .hospital p { float: left; margin: 0 0 0 15px; color: #fff; font-size: 15px; line-height: 21px; font-family: 'Open'; }
 .hospital-list .hospitals .hospital small { float: left; clear: left; margin: 3px 0 0 15px; color: #fff; font-size: 12px; }
-.hospital-list .hospitals .hospital.one { background-color: #1a3566; }
-.hospital-list .hospitals .hospital.two { background-color: #408ac9; }
-.hospital-list .hospitals .hospital.three { background-color: #74afaf; }
-.hospital-list .hospitals .hospital.four { background-color: #beca59; }
-.hospital-list .hospitals .hospital.five { background-color: #d5a007; }
-.hospital-list .hospitals .hospital.six { background-color: #e54a66; }
-.hospital-list .hospitals .hospital.seven { background-color: #8b4583; }
-.hospital-list .hospitals .hospital.eight { background-color: #1b3566; }
-.hospital-list .hospitals .hospital.nine { background-color: #c1ac93; }
-.hospital-list .hospitals .hospital.ten { background-color: #c1ac93; }
-.hospital-list .hospitals .hospital.eleven { background-color: #c1ac93; }
+
+/* Hospital List Link Colors */
+.hospital-list .hospitals .hospital:nth-of-type(7n+1){ background-color: #1a3566; }
+.hospital-list .hospitals .hospital:nth-of-type(7n+2){ background-color: #2C6EAE; }
+.hospital-list .hospitals .hospital:nth-of-type(7n+3){ background-color: #74afaf; }
+.hospital-list .hospitals .hospital:nth-of-type(7n+4){ background-color: #beca59; }
+.hospital-list .hospitals .hospital:nth-of-type(7n+5){ background-color: #d5a007; }
+.hospital-list .hospitals .hospital:nth-of-type(7n+6){ background-color: #e54a66; }
+.hospital-list .hospitals .hospital:nth-of-type(7n+7){ background-color: #8b4583; }
+
+.hospital-list .hospitals .hospital.about { background-color: #cccccc; }
 .hospital-list .hospitals .hospital.map { background: #cccccc url(images/hospital_list_map.png) no-repeat center center; background-size: 95px 78px; -webkit-background-size: 95px 78px; -moz-background-size: 95px 78px; -o-background-size: 95px 78px; }
-/*.hospital-list .hospitals .hospital.nine p { margin-top: 1px; font-size: 14px; }*/
-/*.hospital-list .hospitals .hospital.ten p {  margin-top: 23px; color: #808080; }*/
+.hospital-list .hospitals .hospital.map p, .hospital-list .hospitals .hospital.about p {  margin-top: 23px; color: #808080; }
 
 .hospitalContainer { float: left; width: 100%; height: 275px; position: relative; overflow: hidden; }
 .hospitalContainer > img { position: absolute; top: 0; left: 0; width: 100%; height: auto; z-index: 5; }
 .hospitalContainer a.feedback { position: absolute; z-index: 10; background: #74aaaa url(images/icon_background.png) repeat; background-size: 155px 105px; -webkit-background-size: 155px 105px; -moz-background-size: 155px 105px; -o-background-size: 155px 105px; padding: 12px; border-radius: 6px; width: 80px; font-size: 16px; color: #fff; text-decoration: none; line-height: 20px; text-align: center; left: 25px; top: 75px; }
-.birmingham-womens-hospital .hospitalContainer a.feedback { background-color: #1a3566; }
-.city-hospital .hospitalContainer a.feedback { background-color: #2C6EAE; }
-.heartlands-hospital .hospitalContainer a.feedback { background-color: #74afaf; }
-.worcester-hospital .hospitalContainer a.feedback { background-color: #beca59; }
-.good-hope-hospital .hospitalContainer a.feedback { background-color: #d5a007; }
-.redditch-hospital .hospitalContainer a.feedback { background-color: #e54a66; }
-.hereford-hospital .hospitalContainer a.feedback { background-color: #8b4583; }
-.birmingham-childrens-hospital .hospitalContainer a.feedback { background-color: #1b3566; }
+
 .hospitalContainer a.feedback span.text { font-family: 'OpenBold'; }
 .hospitalContainer a.feedback span.arrow { width: 0; height: 0; border-top: 12px solid transparent; border-bottom: 12px solid transparent; border-right: 12px solid #fff; position: absolute; top: 20px; left: -12px; }
-.birmingham-womens-hospital a.feedback span.arrow { border-right-color: #1a3566; }
-.city-hospital a.feedback span.arrow { border-right-color: #2C6EAE; }
+
+/* Feedback Arrow Colors */
+.queens-hospital-burton .hospitalContainer a.feedback { background-color: #1a3566; }
+.queens-hospital-burton a.feedback span.arrow { border-right-color: #1a3566; }
+
+.royal-derby-hospital .hospitalContainer a.feedback { background-color: #2C6EAE; }
+.royal-derby-hospital a.feedback span.arrow { border-right-color: #2C6EAE; }
+.heartlands-hospital .hospitalContainer a.feedback { background-color: #74afaf; }
 .heartlands-hospital a.feedback span.arrow { border-right-color: #74afaf; }
+.worcester-hospital .hospitalContainer a.feedback { background-color: #beca59; }
 .worcester-hospital a.feedback span.arrow { border-right-color: #beca59; }
+.good-hope-hospital .hospitalContainer a.feedback { background-color: #d5a007; }
 .good-hope-hospital a.feedback span.arrow { border-right-color: #d5a007; }
+.redditch-hospital .hospitalContainer a.feedback { background-color: #e54a66; }
 .redditch-hospital a.feedback span.arrow { border-right-color: #e54a66; }
+.hereford-hospital .hospitalContainer a.feedback { background-color: #8b4583; }
 .hereford-hospital a.feedback span.arrow { border-right-color: #8b4583; }
+.birmingham-childrens-hospital .hospitalContainer a.feedback { background-color: #1b3566; }
 .birmingham-childrens-hospital a.feedback span.arrow { border-right-color: #1b3566; }
+
 .hospitalContainer .title { position: absolute; bottom: 40px; left: 0; width: 88%; padding: 15px 6%; z-index: 10; background: rgba(0,0,0,0.5); }
 .hospitalContainer .title h1 { margin: 0; font-size: 19px; color: #fff; }
 .hospitalContainer .title h5 { margin: 4px 0 0 0; font-size: 13px; color: #fff; }
@@ -204,8 +218,8 @@ p.error { background: #fff; float: left; margin: 0; text-align: center; padding:
 .hospital .contentArea .wardOne { display: block; }
 
 body.feedback { background: #74aaaa url(images/icon_background.png) repeat; background-size: 155px 105px; -webkit-background-size: 155px 105px; -moz-background-size: 155px 105px; -o-background-size: 155px 105px; background-size: 155px 105px; -webkit-background-size: 155px 105px; -moz-background-size: 155px 105px; -o-background-size: 155px 105px; }
-body.feedback.birmingham-womens-hospital { background-color: #1a3566; }
-body.feedback.city-hospital { background-color: #2C6EAE; }
+body.feedback.queens-hospital-burton { background-color: #1a3566; }
+body.feedback.royal-derby-hospital { background-color: #2C6EAE; }
 body.feedback.heartlands-hospital { background-color: #74afaf; }
 body.feedback.worcester-hospital { background-color: #beca59; }
 body.feedback.good-hope-hospital { background-color: #d5a007; }
@@ -215,8 +229,8 @@ body.feedback.birmingham-childrens-hospital { background-color: #1b3566; }
 .feedback .title { background: #fff; border-radius: 6px; padding: 10px 18px; float: left; padding-right: 36px; position: relative; margin: 21px 0 0 15px; -webkit-transform: rotate(358deg); -moz-transform: rotate(358deg); -o-transform: rotate(358deg); writing-mode: lr-tb; }
 .feedback .title h1 { color: #557C80; margin: 0; font-family: 'OpenBold'; font-size: 22px; }
 .feedback .questions > p { color: #fff; float: left; width: 90%; padding: 0 5%; font-size: 14px; line-height: 19px; margin: 16px 0 0 0; }
-.feedback.birmingham-womens-hospital .title h1 { color: #1a3566; }
-.feedback.city-hospital .title h1 { color: #2C6EAE; }
+.feedback.queens-hospital-burton .title h1 { color: #1a3566; }
+.feedback.royal-derby-hospital .title h1 { color: #2C6EAE; }
 .feedback.heartlands-hospital .title h1 { color: #74afaf; }
 .feedback.worcester-hospital .title h1 { color: #beca59; }
 .feedback.good-hope-hospital .title h1 { color: #d5a007; }
@@ -224,8 +238,8 @@ body.feedback.birmingham-childrens-hospital { background-color: #1b3566; }
 .feedback.hereford-hospital .title h1 { color: #8b4583; }
 .feedback.birmingham-childrens-hospital .title h1 { color: #1b3566; }
 .feedback .title h3 { font-size: 17px; color: #74AAAA; margin: 0; }
-.feedback.birmingham-womens-hospital .title h3 { color: #1a3566; }
-.feedback.city-hospital .title h3 { color: #2C6EAE; }
+.feedback.queens-hospital-burton .title h3 { color: #1a3566; }
+.feedback.royal-derby-hospital .title h3 { color: #2C6EAE; }
 .feedback.heartlands-hospital .title h3 { color: #74afaf; }
 .feedback.worcester-hospital .title h3 { color: #beca59; }
 .feedback.good-hope-hospital .title h3 { color: #d5a007; }
@@ -247,8 +261,8 @@ body.feedback.birmingham-childrens-hospital { background-color: #1b3566; }
 .feedback #feedbackForm a#nextQuestions { float: right; background: #fff; font-size: 15px; border-radius: 4px; padding: 6px 12px; text-decoration: none; color: #557C80; font-family: 'OpenBold'; position: relative; margin-right: 5px; margin-bottom: 20px; }
 .feedback #feedbackForm a#nextQuestions span { width: 0; height: 0; border-top: 7px solid transparent; border-bottom: 7px solid transparent; border-left: 7px solid #fff; position: absolute; top: 10px; right: -7px; }
 .feedback #feedbackForm input[type=submit] { float: right; background: #fff; font-size: 15px; border-radius: 4px; padding: 6px 12px; color: #557C80; font-family: 'OpenBold'; position: relative; margin-bottom: 20px; border: 0; display: none; }
-.feedback.birmingham-womens-hospital #feedbackForm input[type=submit], .feedback.birmingham-womens-hospital #feedbackForm a#nextQuestions { color: #1a3566; }
-.feedback.city-hospital #feedbackForm input[type=submit], .feedback.city-hospital #feedbackForm a#nextQuestions { color: #2C6EAE; }
+.feedback.queens-hospital-burton #feedbackForm input[type=submit], .feedback.queens-hospital-burton #feedbackForm a#nextQuestions { color: #1a3566; }
+.feedback.royal-derby-hospital #feedbackForm input[type=submit], .feedback.royal-derby-hospital #feedbackForm a#nextQuestions { color: #2C6EAE; }
 .feedback.heartlands-hospital #feedbackForm input[type=submit], .feedback.heartlands-hospital #feedbackForm a#nextQuestions { color: #74afaf; }
 .feedback.worcester-hospital #feedbackForm input[type=submit], .feedback.worcester-hospital #feedbackForm a#nextQuestions { color: #beca59; }
 .feedback.good-hope-hospital #feedbackForm input[type=submit], .feedback.good-hope-hospital #feedbackForm a#nextQuestions { color: #d5a007; }
