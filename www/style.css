@@ -123,7 +123,7 @@ footer.tabs a.tab.active span { position: absolute; top: -20px; left: 0; width: 
 .hereford-hospital footer.tabs a.tab.active span { border-bottom-color: #8b4583; }
 .birmingham-childrens-hospital footer.tabs a.tab.active span { border-bottom-color: #1b3566; }
 
-.hospital-list .hospitals { float: left; width: 100%; background: #000; }
+.hospital-list .hospitals { float: left; width: 100%; background: #eee; }
 .hospital-list .hospitals .hospital { background: #000 url(images/icon_background.png) repeat; background-size: 155px 105px; -webkit-background-size: 155px 105px; -moz-background-size: 155px 105px; -o-background-size: 155px 105px; width: 50%; height: 59px; padding: 19px 0; text-decoration: none; float: left; cursor: pointer; }
 .hospital-list .hospitals .hospital:hover { opacity: 0.9; }
 .hospital-list .hospitals .hospital p { float: left; margin: 0 0 0 15px; color: #fff; font-size: 15px; line-height: 21px; font-family: 'Open'; }
