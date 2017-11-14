@@ -137,9 +137,11 @@ footer.tabs a.tab.active span { position: absolute; top: -20px; left: 0; width: 
 .hospital-list .hospitals .hospital.seven { background-color: #8b4583; }
 .hospital-list .hospitals .hospital.eight { background-color: #1b3566; }
 .hospital-list .hospitals .hospital.nine { background-color: #c1ac93; }
-.hospital-list .hospitals .hospital.ten { background: #cccccc url(images/hospital_list_map.png) no-repeat center center; background-size: 95px 78px; -webkit-background-size: 95px 78px; -moz-background-size: 95px 78px; -o-background-size: 95px 78px; }
-.hospital-list .hospitals .hospital.nine p { margin-top: 1px; font-size: 14px; }
-.hospital-list .hospitals .hospital.ten p {  margin-top: 23px; color: #808080; }
+.hospital-list .hospitals .hospital.ten { background-color: #c1ac93; }
+.hospital-list .hospitals .hospital.eleven { background-color: #c1ac93; }
+.hospital-list .hospitals .hospital.map { background: #cccccc url(images/hospital_list_map.png) no-repeat center center; background-size: 95px 78px; -webkit-background-size: 95px 78px; -moz-background-size: 95px 78px; -o-background-size: 95px 78px; }
+/*.hospital-list .hospitals .hospital.nine p { margin-top: 1px; font-size: 14px; }*/
+/*.hospital-list .hospitals .hospital.ten p {  margin-top: 23px; color: #808080; }*/
 
 .hospitalContainer { float: left; width: 100%; height: 275px; position: relative; overflow: hidden; }
 .hospitalContainer > img { position: absolute; top: 0; left: 0; width: 100%; height: auto; z-index: 5; }
