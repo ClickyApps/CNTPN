@@ -108,29 +108,28 @@ footer.tabs a.tab.active { background: #74B0B0; height: 65px; }
 footer.tabs a.tab.active span { position: absolute; top: -20px; left: 0; width: 0; height: 0; border-left: 35px solid transparent; border-right: 35px solid transparent; border-bottom: 20px solid #74B0B0; }
 
 /* Hospitals Active Tab Colors */
-/*new*/
-	.queens-hospital-burton footer.tabs a.tab.active { background-color: #1a3566; }
-	.queens-hospital-burton footer.tabs a.tab.active span { border-bottom-color: #1a3566; }
-	.royal-derby-hospital footer.tabs a.tab.active { background-color: #2C6EAE; }
-	.royal-derby-hospital footer.tabs a.tab.active span { border-bottom-color: #2C6EAE; }
-	.kettering-general-hospital footer.tabs a.tab.active { background-color: #74afaf; }
-	.kettering-general-hospital footer.tabs a.tab.active span { border-bottom-color: #74afaf; }
-	.kings-mill-hospital-mansfield footer.tabs a.tab.active { background-color: #beca59; }
-	.kings-mill-hospital-mansfield footer.tabs a.tab.active span { border-bottom-color: #beca59; }
-	.leicester-general-hospital footer.tabs a.tab.active { background-color: #d5a007; }
-	.leicester-general-hospital footer.tabs a.tab.active span { border-bottom-color: #d5a007; }
-	.lincoln-county-hospital footer.tabs a.tab.active { background-color: #e54a66; }
-	.lincoln-county-hospital footer.tabs a.tab.active span { border-bottom-color: #e54a66; }
-	.leicester-royal-infirmary footer.tabs a.tab.active { background-color: #8b4583; }
-	.leicester-royal-infirmary footer.tabs a.tab.active span { border-bottom-color: #8b4583; }
-	.northampton-general-hospital footer.tabs a.tab.active { background-color: #1a3566; }
-	.northampton-general-hospital footer.tabs a.tab.active span { border-bottom-color: #1a3566; }
-	.queens-medical-centre-nottingham footer.tabs a.tab.active { background-color: #2C6EAE; }
-	.queens-medical-centre-nottingham footer.tabs a.tab.active span { border-bottom-color: #2C6EAE; }
-	.nottingham-city-hospital footer.tabs a.tab.active { background-color: #74afaf; }
-	.nottingham-city-hospital footer.tabs a.tab.active span { border-bottom-color: #74afaf; }
-	.pilgrim-hospital-boston footer.tabs a.tab.active { background-color: #beca59; }
-	.pilgrim-hospital-boston footer.tabs a.tab.active span { border-bottom-color: #beca59; }
+.queens-hospital-burton footer.tabs a.tab.active { background-color: #1a3566; }
+.queens-hospital-burton footer.tabs a.tab.active span { border-bottom-color: #1a3566; }
+.royal-derby-hospital footer.tabs a.tab.active { background-color: #2C6EAE; }
+.royal-derby-hospital footer.tabs a.tab.active span { border-bottom-color: #2C6EAE; }
+.kettering-general-hospital footer.tabs a.tab.active { background-color: #74afaf; }
+.kettering-general-hospital footer.tabs a.tab.active span { border-bottom-color: #74afaf; }
+.kings-mill-hospital-mansfield footer.tabs a.tab.active { background-color: #beca59; }
+.kings-mill-hospital-mansfield footer.tabs a.tab.active span { border-bottom-color: #beca59; }
+.leicester-general-hospital footer.tabs a.tab.active { background-color: #d5a007; }
+.leicester-general-hospital footer.tabs a.tab.active span { border-bottom-color: #d5a007; }
+.lincoln-county-hospital footer.tabs a.tab.active { background-color: #e54a66; }
+.lincoln-county-hospital footer.tabs a.tab.active span { border-bottom-color: #e54a66; }
+.leicester-royal-infirmary footer.tabs a.tab.active { background-color: #8b4583; }
+.leicester-royal-infirmary footer.tabs a.tab.active span { border-bottom-color: #8b4583; }
+.northampton-general-hospital footer.tabs a.tab.active { background-color: #1a3566; }
+.northampton-general-hospital footer.tabs a.tab.active span { border-bottom-color: #1a3566; }
+.queens-medical-centre-nottingham footer.tabs a.tab.active { background-color: #2C6EAE; }
+.queens-medical-centre-nottingham footer.tabs a.tab.active span { border-bottom-color: #2C6EAE; }
+.nottingham-city-hospital footer.tabs a.tab.active { background-color: #74afaf; }
+.nottingham-city-hospital footer.tabs a.tab.active span { border-bottom-color: #74afaf; }
+.pilgrim-hospital-boston footer.tabs a.tab.active { background-color: #beca59; }
+.pilgrim-hospital-boston footer.tabs a.tab.active span { border-bottom-color: #beca59; }
 
 .hospital-list .hospitals { float: left; width: 100%; background: #eee; }
 .hospital-list .hospitals .hospital { background: #000 url(images/icon_background.png) repeat; background-size: 155px 105px; -webkit-background-size: 155px 105px; -moz-background-size: 155px 105px; -o-background-size: 155px 105px; width: 50%; height: 59px; padding: 19px 0; text-decoration: none; float: left; cursor: pointer; }
