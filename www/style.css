@@ -152,7 +152,7 @@ footer.tabs a.tab.active span { position: absolute; top: -20px; left: 0; width: 
 
 .hospitalContainer { float: left; width: 100%; height: 275px; position: relative; overflow: hidden; }
 .hospitalContainer > img { position: absolute; top: 0; left: 0; width: 100%; height: auto; z-index: 5; }
-.hospitalContainer a.feedback { position: absolute; z-index: 10; background: #74aaaa url(images/icon_background.png) repeat; background-size: 155px 105px; -webkit-background-size: 155px 105px; -moz-background-size: 155px 105px; -o-background-size: 155px 105px; padding: 12px; border-radius: 6px; width: 80px; font-size: 16px; color: #fff; text-decoration: none; line-height: 20px; text-align: center; left: 25px; top: 30px; }
+.hospitalContainer a.feedback { position: absolute; z-index: 10; background: #74aaaa url(images/icon_background.png) repeat; background-size: 155px 105px; -webkit-background-size: 155px 105px; -moz-background-size: 155px 105px; -o-background-size: 155px 105px; padding: 12px; border-radius: 6px; width: 80px; font-size: 16px; color: #fff; text-decoration: none; line-height: 20px; text-align: center; left: 25px; top: 12px; }
 
 .hospitalContainer a.feedback span.text { font-family: 'OpenBold'; }
 .hospitalContainer a.feedback span.arrow { width: 0; height: 0; border-top: 12px solid transparent; border-bottom: 12px solid transparent; border-right: 12px solid #fff; position: absolute; top: 20px; left: -12px; }
