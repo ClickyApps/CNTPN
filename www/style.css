@@ -85,6 +85,10 @@ strong { font-weight: normal; font-family: 'OpenBold'; }
 .home .links { text-align: center; margin-top: 45px; float: left; padding: 0 5% 47px 5%; width: 90%; }
 .home .links p { margin: 0 0 20px 0; }
 .home .links a.second { margin-bottom: 0; }
+.home .links a { font-size: 16px; line-height: 24px; color: #fff; text-decoration: none; border-bottom: 1px dashed #7dacd4; margin-bottom: 30px; }
+.home .links a:hover {border-color: transparent; }
+.home .links a.first { border-bottom:1px solid white; margin-bottom: 10px;}
+.home .links a.first:hover { background: white; color: #4085c4; }
 
 header { float: left; width: 100%; background: #fff; padding: 12px 0; position: relative; z-index: 10; }
 header .bottomShadow { position: absolute; bottom: -8px; left: 0; width: 100%; background: url(images/standard_drop_shadow.png) no-repeat center top; height: 8px; }
