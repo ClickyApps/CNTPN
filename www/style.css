@@ -53,6 +53,12 @@ a:focus, input:focus { outline: none; }
 @font-face { font-family: 'OpenBold'; src: url('webfonts/opensans-bold-webfont.eot'); src: url('webfonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'), url('webfonts/opensans-bold-webfont.woff') format('woff'), url('webfonts/opensans-bold-webfont.ttf') format('truetype'), url('webfonts/opensans-bold-webfont.svg#open_sansbold') format('svg'); font-weight: normal; font-style: normal; }
 @font-face { font-family: 'OpenLight'; src: url('webfonts/opensans-light-webfont.eot'); src: url('webfonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'), url('webfonts/opensans-light-webfont.woff') format('woff'), url('webfonts/opensans-light-webfont.ttf') format('truetype'), url('webfonts/opensans-light-webfont.svg#open_sanslight') format('svg'); font-weight: normal; font-style: normal; }
 
+/* Buttons */
+
+.button { cursor: pointer; transition:0.3s ease; display: inline-block; font-size: 16px; line-height: 24px; color: #fff; padding:12px 24px; text-decoration: none; border:1px solid white; }
+.button:hover { background: white; color: #4085c4; }
+
+
 /* Main Styles */
 body { font-family: 'OpenLight'; background: #eee; padding-bottom: 43px; float: left; width: 100%; }
 h1, h2, h3, h4, h5, h6 { font-weight: normal; }
@@ -78,9 +84,11 @@ strong { font-weight: normal; font-family: 'OpenBold'; }
 .home .languageChoice .flag.disabled { opacity: 0.2; pointer-events: none; }
 .home .links { text-align: center; margin-top: 45px; float: left; padding: 0 5% 47px 5%; width: 90%; }
 .home .links p { margin: 0 0 20px 0; }
-.home .links a { font-size: 16px; line-height: 24px; color: #fff; text-decoration: none; border-bottom: 1px dashed #7dacd4; margin-bottom: 30px; }
-.home .links a:hover { border-color: transparent; }
 .home .links a.second { margin-bottom: 0; }
+.home .links a { font-size: 16px; line-height: 24px; color: #fff; text-decoration: none; border-bottom: 1px dashed #7dacd4; margin-bottom: 30px; }
+.home .links a:hover {border-color: transparent; }
+.home .links a.first { border-bottom:1px solid white; margin-bottom: 10px;}
+.home .links a.first:hover { background: white; color: #4085c4; }
 
 header { float: left; width: 100%; background: #fff; padding: 12px 0; position: relative; z-index: 10; }
 header .bottomShadow { position: absolute; bottom: -8px; left: 0; width: 100%; background: url(images/standard_drop_shadow.png) no-repeat center top; height: 8px; }
