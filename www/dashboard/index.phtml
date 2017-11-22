@@ -1,0 +1,1499 @@
+<header class="dashboardHeader clearfix">
+    <div class="wrapper">
+        <a href="" class="logo"><img src="/images/dashboard-logo.png" width="249"/></a>
+        <a href="/logout" class="logout">Logout Now</a>
+    </div>   
+</header>
+<div class="wrapper">	    
+    <div class="welcome">		        
+        <h1>Welcome to the feedback dashboard.</h1>		        
+        <p>An overview of statistics for the Southern West Midlands Maternity and Newborn Network.</p>		        
+    </div>	
+    <div class="dashboard clearfix">
+        <section id="s-default" class="statistics default active">
+	        <ul class="statisticsNav clearfix">
+		        <li class="weekly active"><span>Weekly Overview</span></li>
+		        <li class="monthly"><span>Monthly Overview</span></li>
+		        <li class="quarterly"><span>Quarterly Overview</span></li>
+		        <li class="lifetime"><span>Lifetime Overview</span></li>
+	        </ul>
+	        <?php $hospitalData = $this->hospitalData; ?>
+	        <div class="statisticsContent">
+		        <div class="panel weekly active">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $this->networkFeedbacksWeek; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $this->networkFeedbacksCommentWeek; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $this->networkFeedbacksAverageWeek; ?></span><p>average score</p><span class="details"></span></div> 
+				        <div class="comments"><span class="number"><?php echo $this->networkFeedbacksRecommendWeek; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <div class="chart">
+				        <canvas id="chartWeekly" height="250" width="250"></canvas>
+				        <p>&#37; of feedback per hospital</p>
+				        <script type="text/javascript">
+							var pieData = [ 
+								{ value : <?php echo $hospitalData["Birmingham Women's Hospital"]['networkFeedbacksWeek'] ? $hospitalData["Birmingham Women's Hospital"]['networkFeedbacksWeek'] : '0'; ?>, color : "#1a3566", label : 'Birmingham Women\'s Hospital'},
+								{ value : <?php echo $hospitalData["City Hospital"]['networkFeedbacksWeek'] ? $hospitalData["City Hospital"]['networkFeedbacksWeek'] : '0'; ?>, color : "#408ac9", label : 'City Hospital' },
+								{ value : <?php echo $hospitalData["Heartlands Hospital"]['networkFeedbacksWeek'] ? $hospitalData["Heartlands Hospital"]['networkFeedbacksWeek'] : '0'; ?>, color : "#74afaf", label : 'Heartlands Hospital' },
+								{ value : <?php echo $hospitalData["Worcester Hospital"]['networkFeedbacksWeek'] ? $hospitalData["Worcester Hospital"]['networkFeedbacksWeek'] : '0'; ?>, color : "#beca59", label : 'Worcester Hospital' },
+								{ value : <?php echo $hospitalData["Good Hope Hospital"]['networkFeedbacksWeek'] ? $hospitalData["Good Hope Hospital"]['networkFeedbacksWeek'] : '0'; ?>, color : "#d5a007", label : 'Good Hope Hospital' },
+								{ value : <?php echo $hospitalData["Redditch Hospital"]['networkFeedbacksWeek'] ? $hospitalData["Redditch Hospital"]['networkFeedbacksWeek'] : '0'; ?>, color : "#e54a66", label : 'Redditch Hospital' },
+								{ value : <?php echo $hospitalData["Hereford Hospital"]['networkFeedbacksWeek'] ? $hospitalData["Hereford Hospital"]['networkFeedbacksWeek'] : '0'; ?>, color : "#8b4583", label : 'Hereford Hospital' },
+								{ value : <?php echo $hospitalData["Birmingham Children's Hospital"]['networkFeedbacksWeek'] ? $hospitalData["Birmingham Children's Hospital"]['networkFeedbacksWeek'] : '0'; ?>, color : "#4D297A", label : 'Birmingham Children\'s Hospital' } ];
+							var myPie = new Chart(document.getElementById("chartWeekly").getContext("2d")).Pie(pieData, { animationEasing : "easeInOutCubic", segmentStrokeWidth : 1, labelFontSize : 0 });
+						</script>
+			        </div>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+		        <div class="panel monthly">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $this->networkFeedbacksMonth; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $this->networkFeedbacksCommentMonth; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $this->networkFeedbacksAverageMonth; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $this->networkFeedbacksRecommendMonth; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <div class="chart">
+				        <canvas id="chartMonthly" height="250" width="250"></canvas>
+				        <p>&#37; of feedback per hospital</p>
+				        <script type="text/javascript">
+							var pieData = [ 
+								{ value : <?php echo $hospitalData["Birmingham Women's Hospital"]['networkFeedbacksMonth'] ? $hospitalData["Birmingham Women's Hospital"]['networkFeedbacksMonth'] : '0'; ?>, color : "#1a3566", label : 'Birmingham Women\'s Hospital'},
+								{ value : <?php echo $hospitalData["City Hospital"]['networkFeedbacksMonth'] ? $hospitalData["City Hospital"]['networkFeedbacksMonth'] : '0'; ?>, color : "#408ac9", label : 'City Hospital' },
+								{ value : <?php echo $hospitalData["Heartlands Hospital"]['networkFeedbacksMonth'] ? $hospitalData["Heartlands Hospital"]['networkFeedbacksMonth'] : '0'; ?>, color : "#74afaf", label : 'Heartlands Hospital' },
+								{ value : <?php echo $hospitalData["Worcester Hospital"]['networkFeedbacksMonth'] ? $hospitalData["Worcester Hospital"]['networkFeedbacksMonth'] : '0'; ?>, color : "#beca59", label : 'Worcester Hospital' },
+								{ value : <?php echo $hospitalData["Good Hope Hospital"]['networkFeedbacksMonth'] ? $hospitalData["Good Hope Hospital"]['networkFeedbacksMonth'] : '0'; ?>, color : "#d5a007", label : 'Good Hope Hospital' },
+								{ value : <?php echo $hospitalData["Redditch Hospital"]['networkFeedbacksMonth'] ? $hospitalData["Redditch Hospital"]['networkFeedbacksMonth'] : '0'; ?>, color : "#e54a66", label : 'Redditch Hospital' },
+								{ value : <?php echo $hospitalData["Hereford Hospital"]['networkFeedbacksMonth'] ? $hospitalData["Hereford Hospital"]['networkFeedbacksMonth'] : '0'; ?>, color : "#8b4583", label : 'Hereford Hospital' },
+								{ value : <?php echo $hospitalData["Birmingham Children's Hospital"]['networkFeedbacksMonth'] ? $hospitalData["Birmingham Children's Hospital"]['networkFeedbacksMonth'] : '0'; ?>, color : "#4D297A", label : 'Birmingham Children\'s Hospital' } ];
+							var myPie = new Chart(document.getElementById("chartMonthly").getContext("2d")).Pie(pieData, { animationEasing : "easeInOutCubic", segmentStrokeWidth : 1, labelFontSize : 0 });
+						</script>
+			        </div>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+		        <div class="panel quarterly">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $this->networkFeedbacksQuarter; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $this->networkFeedbacksCommentQuarter; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $this->networkFeedbacksAverageQuarter; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $this->networkFeedbacksRecommendQuarter; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <div class="chart">
+				        <canvas id="chartquarterly" height="250" width="250"></canvas>
+				        <p>&#37; of feedback per hospital</p>
+				        <script type="text/javascript">
+							var pieData = [ 
+								{ value : <?php echo $hospitalData["Birmingham Women's Hospital"]['networkFeedbacksQuarter'] ? $hospitalData["Birmingham Women's Hospital"]['networkFeedbacksQuarter'] : '0'; ?>, color : "#1a3566", label : 'Birmingham Women\'s Hospital'},
+								{ value : <?php echo $hospitalData["City Hospital"]['networkFeedbacksQuarter'] ? $hospitalData["City Hospital"]['networkFeedbacksQuarter'] : '0'; ?>, color : "#408ac9", label : 'City Hospital' },
+								{ value : <?php echo $hospitalData["Heartlands Hospital"]['networkFeedbacksQuarter'] ? $hospitalData["Heartlands Hospital"]['networkFeedbacksQuarter'] : '0'; ?>, color : "#74afaf", label : 'Heartlands Hospital' },
+								{ value : <?php echo $hospitalData["Worcester Hospital"]['networkFeedbacksQuarter'] ? $hospitalData["Worcester Hospital"]['networkFeedbacksQuarter'] : '0'; ?>, color : "#beca59", label : 'Worcester Hospital' },
+								{ value : <?php echo $hospitalData["Good Hope Hospital"]['networkFeedbacksQuarter'] ? $hospitalData["Good Hope Hospital"]['networkFeedbacksQuarter'] : '0'; ?>, color : "#d5a007", label : 'Good Hope Hospital' },
+								{ value : <?php echo $hospitalData["Redditch Hospital"]['networkFeedbacksQuarter'] ? $hospitalData["Redditch Hospital"]['networkFeedbacksQuarter'] : '0'; ?>, color : "#e54a66", label : 'Redditch Hospital' },
+								{ value : <?php echo $hospitalData["Hereford Hospital"]['networkFeedbacksQuarter'] ? $hospitalData["Hereford Hospital"]['networkFeedbacksQuarter'] : '0'; ?>, color : "#8b4583", label : 'Hereford Hospital' },
+								{ value : <?php echo $hospitalData["Birmingham Children's Hospital"]['networkFeedbacksQuarter'] ? $hospitalData["Birmingham Children's Hospital"]['networkFeedbacksQuarter'] : '0'; ?>, color : "#4D297A", label : 'Birmingham Children\'s Hospital' } ];
+							var myPie = new Chart(document.getElementById("chartquarterly").getContext("2d")).Pie(pieData, { animationEasing : "easeInOutCubic", segmentStrokeWidth : 1, labelFontSize : 0 });
+						</script>
+			        </div>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+		        <div class="panel lifetime">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $this->networkFeedbacksLifetime; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $this->networkFeedbacksCommentLifetime; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $this->networkFeedbacksAverageLifetime; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $this->networkFeedbacksRecommendLifetime; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <div class="chart">
+				        <canvas id="chartLifetime" height="250" width="250"></canvas>
+				        <p>&#37; of feedback per hospital</p>
+				        <script type="text/javascript">
+							var pieData = [ 
+								{ value : <?php echo $hospitalData["Birmingham Women's Hospital"]['networkFeedbacksLifetime'] ? $hospitalData["Birmingham Women's Hospital"]['networkFeedbacksLifetime'] : '0'; ?>, color : "#1a3566", label : 'Birmingham Women\'s Hospital'},
+								{ value : <?php echo $hospitalData["City Hospital"]['networkFeedbacksLifetime'] ? $hospitalData["City Hospital"]['networkFeedbacksLifetime'] : '0'; ?>, color : "#408ac9", label : 'City Hospital' },
+								{ value : <?php echo $hospitalData["Heartlands Hospital"]['networkFeedbacksLifetime'] ? $hospitalData["Heartlands Hospital"]['networkFeedbacksLifetime'] : '0'; ?>, color : "#74afaf", label : 'Heartlands Hospital' },
+								{ value : <?php echo $hospitalData["Worcester Hospital"]['networkFeedbacksLifetime'] ? $hospitalData["Worcester Hospital"]['networkFeedbacksLifetime'] : '0'; ?>, color : "#beca59", label : 'Worcester Hospital' },
+								{ value : <?php echo $hospitalData["Good Hope Hospital"]['networkFeedbacksLifetime'] ? $hospitalData["Good Hope Hospital"]['networkFeedbacksLifetime'] : '0'; ?>, color : "#d5a007", label : 'Good Hope Hospital' },
+								{ value : <?php echo $hospitalData["Redditch Hospital"]['networkFeedbacksLifetime'] ? $hospitalData["Redditch Hospital"]['networkFeedbacksLifetime'] : '0'; ?>, color : "#e54a66", label : 'Redditch Hospital' },
+								{ value : <?php echo $hospitalData["Hereford Hospital"]['networkFeedbacksLifetime'] ? $hospitalData["Hereford Hospital"]['networkFeedbacksLifetime'] : '0'; ?>, color : "#8b4583", label : 'Hereford Hospital' },
+								{ value : <?php echo $hospitalData["Birmingham Children's Hospital"]['networkFeedbacksLifetime'] ? $hospitalData["Birmingham Children's Hospital"]['networkFeedbacksLifetime'] : '0'; ?>, color : "#4D297A", label : 'Birmingham Children\'s Hospital' } ];
+							var myPie = new Chart(document.getElementById("chartLifetime").getContext("2d")).Pie(pieData, { animationEasing : "easeInOutCubic", segmentStrokeWidth : 1, labelFontSize : 0 });
+						</script>
+			        </div>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+	        </div>
+        </section><!-- default -->
+        <section id="s-birminghamWomens" class="statistics">
+	        <ul class="statisticsNav clearfix">
+		        <li class="weekly active"><span>Weekly Overview</span></li>
+		        <li class="monthly"><span>Monthly Overview</span></li>
+		        <li class="quarterly"><span>Quarterly Overview</span></li>
+		        <li class="lifetime"><span>Lifetime Overview</span></li>
+	        </ul>
+	        <div class="statisticsContent">
+		        <div class="panel weekly active">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $hospitalData["Birmingham Women's Hospital"]['networkFeedbacksWeek']; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $hospitalData["Birmingham Women's Hospital"]['networkFeedbacksCommentWeek']; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $hospitalData["Birmingham Women's Hospital"]['networkFeedbacksAverageWeek']; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $hospitalData["Birmingham Women's Hospital"]['networkFeedbacksRecommendWeek']; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <table>
+					    <tr class="labels">
+					        <td></td><td><span>Highest</span></td><td><span>Lowest</span></td><td><span>Average</span></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 1<span>Rate the cleanliness level of the hospital</span></a></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableWeek']['Question_1']['high']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableWeek']['Question_1']['low']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableWeek']['Question_1']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 2<span>Rate the staff friendliness</span></a></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableWeek']['Question_2']['high']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableWeek']['Question_2']['low']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableWeek']['Question_2']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 3<span>Were you updated regularly on the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableWeek']['Question_3']['high']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableWeek']['Question_3']['low']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableWeek']['Question_3']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 4<span>Were you involved in the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableWeek']['Question_4']['high']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableWeek']['Question_4']['low']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableWeek']['Question_4']['average']; ?></td>
+					    </tr>
+					</table>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+		        <div class="panel monthly">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $hospitalData["Birmingham Women's Hospital"]['networkFeedbacksMonth']; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $hospitalData["Birmingham Women's Hospital"]['networkFeedbacksCommentMonth']; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $hospitalData["Birmingham Women's Hospital"]['networkFeedbacksAverageMonth']; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $hospitalData["Birmingham Women's Hospital"]['networkFeedbacksRecommendMonth']; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <table>
+					    <tr class="labels">
+					        <td></td><td><span>Highest</span></td><td><span>Lowest</span></td><td><span>Average</span></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 1<span>Rate the cleanliness level of the hospital</span></a></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableMonth']['Question_1']['high']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableMonth']['Question_1']['low']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableMonth']['Question_1']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 2<span>Rate the staff friendliness</span></a></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableMonth']['Question_2']['high']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableMonth']['Question_2']['low']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableMonth']['Question_2']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 3<span>Were you updated regularly on the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableMonth']['Question_3']['high']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableMonth']['Question_3']['low']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableMonth']['Question_3']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 4<span>Were you involved in the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableMonth']['Question_4']['high']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableMonth']['Question_4']['low']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableMonth']['Question_4']['average']; ?></td>
+					    </tr>
+					</table>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+		        <div class="panel quarterly">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $hospitalData["Birmingham Women's Hospital"]['networkFeedbacksQuarter']; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $hospitalData["Birmingham Women's Hospital"]['networkFeedbacksCommentQuarter']; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $hospitalData["Birmingham Women's Hospital"]['networkFeedbacksAverageQuarter']; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $hospitalData["Birmingham Women's Hospital"]['networkFeedbacksRecommendQuarter']; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <table>
+					    <tr class="labels">
+					        <td></td><td><span>Highest</span></td><td><span>Lowest</span></td><td><span>Average</span></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 1<span>Rate the cleanliness level of the hospital</span></a></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableQuarter']['Question_1']['high']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableQuarter']['Question_1']['low']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableQuarter']['Question_1']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 2<span>Rate the staff friendliness</span></a></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableQuarter']['Question_2']['high']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableQuarter']['Question_2']['low']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableQuarter']['Question_2']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 3<span>Were you updated regularly on the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableQuarter']['Question_3']['high']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableQuarter']['Question_3']['low']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableQuarter']['Question_3']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 4<span>Were you involved in the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableQuarter']['Question_4']['high']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableQuarter']['Question_4']['low']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableQuarter']['Question_4']['average']; ?></td>
+					    </tr>
+					</table>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+		        <div class="panel lifetime">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $hospitalData["Birmingham Women's Hospital"]['networkFeedbacksLifetime']; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $hospitalData["Birmingham Women's Hospital"]['networkFeedbacksCommentLifetime']; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $hospitalData["Birmingham Women's Hospital"]['networkFeedbacksAverageLifetime']; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $hospitalData["Birmingham Women's Hospital"]['networkFeedbacksRecommendLifetime']; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <table>
+					    <tr class="labels">
+					        <td></td><td><span>Highest</span></td><td><span>Lowest</span></td><td><span>Average</span></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 1<span>Rate the cleanliness level of the hospital</span></a></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableLifetime']['Question_1']['high']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableLifetime']['Question_1']['low']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableLifetime']['Question_1']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 2<span>Rate the staff friendliness</span></a></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableLifetime']['Question_2']['high']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableLifetime']['Question_2']['low']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableLifetime']['Question_2']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 3<span>Were you updated regularly on the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableLifetime']['Question_3']['high']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableLifetime']['Question_3']['low']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableLifetime']['Question_3']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 4<span>Were you involved in the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableLifetime']['Question_4']['high']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableLifetime']['Question_4']['low']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Women's Hospital"]['dataTableLifetime']['Question_4']['average']; ?></td>
+					    </tr>
+					</table>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+	        </div>
+        </section><!-- Birmingham Women's Hospital -->
+        <section id="s-city" class="statistics">
+	        <ul class="statisticsNav clearfix">
+		        <li class="weekly active"><span>Weekly Overview</span></li>
+		        <li class="monthly"><span>Monthly Overview</span></li>
+		        <li class="quarterly"><span>Quarterly Overview</span></li>
+		        <li class="lifetime"><span>Lifetime Overview</span></li>
+	        </ul>
+	        <div class="statisticsContent">
+		        <div class="panel weekly active">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $hospitalData["City Hospital"]['networkFeedbacksWeek']; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $hospitalData["City Hospital"]['networkFeedbacksCommentWeek']; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $hospitalData["City Hospital"]['networkFeedbacksAverageWeek']; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $hospitalData["City Hospital"]['networkFeedbacksRecommendWeek']; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <table>
+					    <tr class="labels">
+					        <td></td><td><span>Highest</span></td><td><span>Lowest</span></td><td><span>Average</span></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 1<span>Rate the cleanliness level of the hospital</span></a></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableWeek']['Question_1']['high']; ?></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableWeek']['Question_1']['low']; ?></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableWeek']['Question_1']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 2<span>Rate the staff friendliness</span></a></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableWeek']['Question_2']['high']; ?></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableWeek']['Question_2']['low']; ?></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableWeek']['Question_2']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 3<span>Were you updated regularly on the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableWeek']['Question_3']['high']; ?></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableWeek']['Question_3']['low']; ?></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableWeek']['Question_3']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 4<span>Were you involved in the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableWeek']['Question_4']['high']; ?></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableWeek']['Question_4']['low']; ?></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableWeek']['Question_4']['average']; ?></td>
+					    </tr>
+					</table>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+		        <div class="panel monthly">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $hospitalData["City Hospital"]['networkFeedbacksMonth']; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $hospitalData["City Hospital"]['networkFeedbacksCommentMonth']; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $hospitalData["City Hospital"]['networkFeedbacksAverageMonth']; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $hospitalData["City Hospital"]['networkFeedbacksRecommendMonth']; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <table>
+					    <tr class="labels">
+					        <td></td><td><span>Highest</span></td><td><span>Lowest</span></td><td><span>Average</span></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 1<span>Rate the cleanliness level of the hospital</span></a></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableMonth']['Question_1']['high']; ?></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableMonth']['Question_1']['low']; ?></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableMonth']['Question_1']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 2<span>Rate the staff friendliness</span></a></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableMonth']['Question_2']['high']; ?></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableMonth']['Question_2']['low']; ?></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableMonth']['Question_2']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 3<span>Were you updated regularly on the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableMonth']['Question_3']['high']; ?></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableMonth']['Question_3']['low']; ?></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableMonth']['Question_3']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 4<span>Were you involved in the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableMonth']['Question_4']['high']; ?></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableMonth']['Question_4']['low']; ?></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableMonth']['Question_4']['average']; ?></td>
+					    </tr>
+					</table>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+		        <div class="panel quarterly">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $hospitalData["City Hospital"]['networkFeedbacksQuarter']; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $hospitalData["City Hospital"]['networkFeedbacksCommentQuarter']; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $hospitalData["City Hospital"]['networkFeedbacksAverageQuarter']; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $hospitalData["City Hospital"]['networkFeedbacksRecommendQuarter']; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <table>
+					    <tr class="labels">
+					        <td></td><td><span>Highest</span></td><td><span>Lowest</span></td><td><span>Average</span></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 1<span>Rate the cleanliness level of the hospital</span></a></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableQuarter']['Question_1']['high']; ?></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableQuarter']['Question_1']['low']; ?></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableQuarter']['Question_1']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 2<span>Rate the staff friendliness</span></a></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableQuarter']['Question_2']['high']; ?></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableQuarter']['Question_2']['low']; ?></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableQuarter']['Question_2']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 3<span>Were you updated regularly on the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableQuarter']['Question_3']['high']; ?></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableQuarter']['Question_3']['low']; ?></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableQuarter']['Question_3']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 4<span>Were you involved in the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableQuarter']['Question_4']['high']; ?></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableQuarter']['Question_4']['low']; ?></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableQuarter']['Question_4']['average']; ?></td>
+					    </tr>
+					</table>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+		        <div class="panel lifetime">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $hospitalData["City Hospital"]['networkFeedbacksLifetime']; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $hospitalData["City Hospital"]['networkFeedbacksCommentLifetime']; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $hospitalData["City Hospital"]['networkFeedbacksAverageLifetime']; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $hospitalData["City Hospital"]['networkFeedbacksRecommendLifetime']; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <table>
+					    <tr class="labels">
+					        <td></td><td><span>Highest</span></td><td><span>Lowest</span></td><td><span>Average</span></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 1<span>Rate the cleanliness level of the hospital</span></a></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableLifetime']['Question_1']['high']; ?></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableLifetime']['Question_1']['low']; ?></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableLifetime']['Question_1']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 2<span>Rate the staff friendliness</span></a></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableLifetime']['Question_2']['high']; ?></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableLifetime']['Question_2']['low']; ?></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableLifetime']['Question_2']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 3<span>Were you updated regularly on the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableLifetime']['Question_3']['high']; ?></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableLifetime']['Question_3']['low']; ?></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableLifetime']['Question_3']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 4<span>Were you involved in the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableLifetime']['Question_4']['high']; ?></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableLifetime']['Question_4']['low']; ?></td>
+					        <td><?php echo $hospitalData["City Hospital"]['dataTableLifetime']['Question_4']['average']; ?></td>
+					    </tr>
+					</table>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+	        </div>
+        </section><!-- Birmingham Women's Hospital -->
+        <section id="s-heartlands" class="statistics">
+	        <ul class="statisticsNav clearfix">
+		        <li class="weekly active"><span>Weekly Overview</span></li>
+		        <li class="monthly"><span>Monthly Overview</span></li>
+		        <li class="quarterly"><span>Quarterly Overview</span></li>
+		        <li class="lifetime"><span>Lifetime Overview</span></li>
+	        </ul>
+	        <div class="statisticsContent">
+		        <div class="panel weekly active">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $hospitalData["Heartlands Hospital"]['networkFeedbacksWeek']; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $hospitalData["Heartlands Hospital"]['networkFeedbacksCommentWeek']; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $hospitalData["Heartlands Hospital"]['networkFeedbacksAverageWeek']; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $hospitalData["Heartlands Hospital"]['networkFeedbacksRecommendWeek']; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <table>
+					    <tr class="labels">
+					        <td></td><td><span>Highest</span></td><td><span>Lowest</span></td><td><span>Average</span></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 1<span>Rate the cleanliness level of the hospital</span></a></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableWeek']['Question_1']['high']; ?></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableWeek']['Question_1']['low']; ?></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableWeek']['Question_1']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 2<span>Rate the staff friendliness</span></a></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableWeek']['Question_2']['high']; ?></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableWeek']['Question_2']['low']; ?></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableWeek']['Question_2']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 3<span>Were you updated regularly on the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableWeek']['Question_3']['high']; ?></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableWeek']['Question_3']['low']; ?></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableWeek']['Question_3']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 4<span>Were you involved in the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableWeek']['Question_4']['high']; ?></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableWeek']['Question_4']['low']; ?></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableWeek']['Question_4']['average']; ?></td>
+					    </tr>
+					</table>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+		        <div class="panel monthly">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $hospitalData["Heartlands Hospital"]['networkFeedbacksMonth']; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $hospitalData["Heartlands Hospital"]['networkFeedbacksCommentMonth']; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $hospitalData["Heartlands Hospital"]['networkFeedbacksAverageMonth']; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $hospitalData["Heartlands Hospital"]['networkFeedbacksRecommendMonth']; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <table>
+					    <tr class="labels">
+					        <td></td><td><span>Highest</span></td><td><span>Lowest</span></td><td><span>Average</span></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 1<span>Rate the cleanliness level of the hospital</span></a></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableMonth']['Question_1']['high']; ?></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableMonth']['Question_1']['low']; ?></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableMonth']['Question_1']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 2<span>Rate the staff friendliness</span></a></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableMonth']['Question_2']['high']; ?></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableMonth']['Question_2']['low']; ?></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableMonth']['Question_2']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 3<span>Were you updated regularly on the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableMonth']['Question_3']['high']; ?></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableMonth']['Question_3']['low']; ?></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableMonth']['Question_3']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 4<span>Were you involved in the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableMonth']['Question_4']['high']; ?></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableMonth']['Question_4']['low']; ?></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableMonth']['Question_4']['average']; ?></td>
+					    </tr>
+					</table>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+		        <div class="panel quarterly">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $hospitalData["Heartlands Hospital"]['networkFeedbacksQuarter']; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $hospitalData["Heartlands Hospital"]['networkFeedbacksCommentQuarter']; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $hospitalData["Heartlands Hospital"]['networkFeedbacksAverageQuarter']; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $hospitalData["Heartlands Hospital"]['networkFeedbacksRecommendQuarter']; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <table>
+					    <tr class="labels">
+					        <td></td><td><span>Highest</span></td><td><span>Lowest</span></td><td><span>Average</span></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 1<span>Rate the cleanliness level of the hospital</span></a></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableQuarter']['Question_1']['high']; ?></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableQuarter']['Question_1']['low']; ?></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableQuarter']['Question_1']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 2<span>Rate the staff friendliness</span></a></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableQuarter']['Question_2']['high']; ?></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableQuarter']['Question_2']['low']; ?></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableQuarter']['Question_2']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 3<span>Were you updated regularly on the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableQuarter']['Question_3']['high']; ?></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableQuarter']['Question_3']['low']; ?></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableQuarter']['Question_3']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 4<span>Were you involved in the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableQuarter']['Question_4']['high']; ?></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableQuarter']['Question_4']['low']; ?></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableQuarter']['Question_4']['average']; ?></td>
+					    </tr>
+					</table>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+		        <div class="panel lifetime">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $hospitalData["Heartlands Hospital"]['networkFeedbacksLifetime']; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $hospitalData["Heartlands Hospital"]['networkFeedbacksCommentLifetime']; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $hospitalData["Heartlands Hospital"]['networkFeedbacksAverageLifetime']; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $hospitalData["Heartlands Hospital"]['networkFeedbacksRecommendLifetime']; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <table>
+					    <tr class="labels">
+					        <td></td><td><span>Highest</span></td><td><span>Lowest</span></td><td><span>Average</span></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 1<span>Rate the cleanliness level of the hospital</span></a></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableLifetime']['Question_1']['high']; ?></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableLifetime']['Question_1']['low']; ?></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableLifetime']['Question_1']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 2<span>Rate the staff friendliness</span></a></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableLifetime']['Question_2']['high']; ?></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableLifetime']['Question_2']['low']; ?></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableLifetime']['Question_2']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 3<span>Were you updated regularly on the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableLifetime']['Question_3']['high']; ?></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableLifetime']['Question_3']['low']; ?></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableLifetime']['Question_3']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 4<span>Were you involved in the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableLifetime']['Question_4']['high']; ?></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableLifetime']['Question_4']['low']; ?></td>
+					        <td><?php echo $hospitalData["Heartlands Hospital"]['dataTableLifetime']['Question_4']['average']; ?></td>
+					    </tr>
+					</table>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+	        </div>
+        </section><!-- Heartlands Hospital -->
+        <section id="s-worcester" class="statistics">
+	        <ul class="statisticsNav clearfix">
+		        <li class="weekly active"><span>Weekly Overview</span></li>
+		        <li class="monthly"><span>Monthly Overview</span></li>
+		        <li class="quarterly"><span>Quarterly Overview</span></li>
+		        <li class="lifetime"><span>Lifetime Overview</span></li>
+	        </ul>
+	        <div class="statisticsContent">
+		        <div class="panel weekly active">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $hospitalData["Worcester Hospital"]['networkFeedbacksWeek']; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $hospitalData["Worcester Hospital"]['networkFeedbacksCommentWeek']; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $hospitalData["Worcester Hospital"]['networkFeedbacksAverageWeek']; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $hospitalData["Worcester Hospital"]['networkFeedbacksRecommendWeek']; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <table>
+					    <tr class="labels">
+					        <td></td><td><span>Highest</span></td><td><span>Lowest</span></td><td><span>Average</span></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 1<span>Rate the cleanliness level of the hospital</span></a></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableWeek']['Question_1']['high']; ?></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableWeek']['Question_1']['low']; ?></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableWeek']['Question_1']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 2<span>Rate the staff friendliness</span></a></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableWeek']['Question_2']['high']; ?></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableWeek']['Question_2']['low']; ?></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableWeek']['Question_2']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 3<span>Were you updated regularly on the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableWeek']['Question_3']['high']; ?></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableWeek']['Question_3']['low']; ?></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableWeek']['Question_3']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 4<span>Were you involved in the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableWeek']['Question_4']['high']; ?></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableWeek']['Question_4']['low']; ?></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableWeek']['Question_4']['average']; ?></td>
+					    </tr>
+					</table>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+		        <div class="panel monthly">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $hospitalData["Worcester Hospital"]['networkFeedbacksMonth']; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $hospitalData["Worcester Hospital"]['networkFeedbacksCommentMonth']; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $hospitalData["Worcester Hospital"]['networkFeedbacksAverageMonth']; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $hospitalData["Worcester Hospital"]['networkFeedbacksRecommendMonth']; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <table>
+					    <tr class="labels">
+					        <td></td><td><span>Highest</span></td><td><span>Lowest</span></td><td><span>Average</span></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 1<span>Rate the cleanliness level of the hospital</span></a></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableMonth']['Question_1']['high']; ?></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableMonth']['Question_1']['low']; ?></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableMonth']['Question_1']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 2<span>Rate the staff friendliness</span></a></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableMonth']['Question_2']['high']; ?></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableMonth']['Question_2']['low']; ?></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableMonth']['Question_2']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 3<span>Were you updated regularly on the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableMonth']['Question_3']['high']; ?></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableMonth']['Question_3']['low']; ?></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableMonth']['Question_3']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 4<span>Were you involved in the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableMonth']['Question_4']['high']; ?></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableMonth']['Question_4']['low']; ?></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableMonth']['Question_4']['average']; ?></td>
+					    </tr>
+					</table>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+		        <div class="panel quarterly">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $hospitalData["Worcester Hospital"]['networkFeedbacksQuarter']; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $hospitalData["Worcester Hospital"]['networkFeedbacksCommentQuarter']; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $hospitalData["Worcester Hospital"]['networkFeedbacksAverageQuarter']; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $hospitalData["Worcester Hospital"]['networkFeedbacksRecommendQuarter']; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <table>
+					    <tr class="labels">
+					        <td></td><td><span>Highest</span></td><td><span>Lowest</span></td><td><span>Average</span></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 1<span>Rate the cleanliness level of the hospital</span></a></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableQuarter']['Question_1']['high']; ?></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableQuarter']['Question_1']['low']; ?></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableQuarter']['Question_1']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 2<span>Rate the staff friendliness</span></a></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableQuarter']['Question_2']['high']; ?></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableQuarter']['Question_2']['low']; ?></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableQuarter']['Question_2']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 3<span>Were you updated regularly on the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableQuarter']['Question_3']['high']; ?></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableQuarter']['Question_3']['low']; ?></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableQuarter']['Question_3']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 4<span>Were you involved in the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableQuarter']['Question_4']['high']; ?></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableQuarter']['Question_4']['low']; ?></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableQuarter']['Question_4']['average']; ?></td>
+					    </tr>
+					</table>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+		        <div class="panel lifetime">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $hospitalData["Worcester Hospital"]['networkFeedbacksLifetime']; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $hospitalData["Worcester Hospital"]['networkFeedbacksCommentLifetime']; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $hospitalData["Worcester Hospital"]['networkFeedbacksAverageLifetime']; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $hospitalData["Worcester Hospital"]['networkFeedbacksRecommendLifetime']; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <table>
+					    <tr class="labels">
+					        <td></td><td><span>Highest</span></td><td><span>Lowest</span></td><td><span>Average</span></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 1<span>Rate the cleanliness level of the hospital</span></a></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableLifetime']['Question_1']['high']; ?></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableLifetime']['Question_1']['low']; ?></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableLifetime']['Question_1']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 2<span>Rate the staff friendliness</span></a></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableLifetime']['Question_2']['high']; ?></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableLifetime']['Question_2']['low']; ?></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableLifetime']['Question_2']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 3<span>Were you updated regularly on the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableLifetime']['Question_3']['high']; ?></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableLifetime']['Question_3']['low']; ?></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableLifetime']['Question_3']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 4<span>Were you involved in the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableLifetime']['Question_4']['high']; ?></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableLifetime']['Question_4']['low']; ?></td>
+					        <td><?php echo $hospitalData["Worcester Hospital"]['dataTableLifetime']['Question_4']['average']; ?></td>
+					    </tr>
+					</table>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+	        </div>
+        </section><!-- Worcester Hospital -->
+        <section id="s-goodHope" class="statistics">
+	        <ul class="statisticsNav clearfix">
+		        <li class="weekly active"><span>Weekly Overview</span></li>
+		        <li class="monthly"><span>Monthly Overview</span></li>
+		        <li class="quarterly"><span>Quarterly Overview</span></li>
+		        <li class="lifetime"><span>Lifetime Overview</span></li>
+	        </ul>
+	        <div class="statisticsContent">
+		        <div class="panel weekly active">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $hospitalData["Good Hope Hospital"]['networkFeedbacksWeek']; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $hospitalData["Good Hope Hospital"]['networkFeedbacksCommentWeek']; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $hospitalData["Good Hope Hospital"]['networkFeedbacksAverageWeek']; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $hospitalData["Good Hope Hospital"]['networkFeedbacksRecommendWeek']; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <table>
+					    <tr class="labels">
+					        <td></td><td><span>Highest</span></td><td><span>Lowest</span></td><td><span>Average</span></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 1<span>Rate the cleanliness level of the hospital</span></a></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableWeek']['Question_1']['high']; ?></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableWeek']['Question_1']['low']; ?></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableWeek']['Question_1']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 2<span>Rate the staff friendliness</span></a></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableWeek']['Question_2']['high']; ?></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableWeek']['Question_2']['low']; ?></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableWeek']['Question_2']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 3<span>Were you updated regularly on the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableWeek']['Question_3']['high']; ?></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableWeek']['Question_3']['low']; ?></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableWeek']['Question_3']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 4<span>Were you involved in the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableWeek']['Question_4']['high']; ?></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableWeek']['Question_4']['low']; ?></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableWeek']['Question_4']['average']; ?></td>
+					    </tr>
+					</table>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+		        <div class="panel monthly">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $hospitalData["Good Hope Hospital"]['networkFeedbacksMonth']; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $hospitalData["Good Hope Hospital"]['networkFeedbacksCommentMonth']; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $hospitalData["Good Hope Hospital"]['networkFeedbacksAverageMonth']; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $hospitalData["Good Hope Hospital"]['networkFeedbacksRecommendMonth']; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <table>
+					    <tr class="labels">
+					        <td></td><td><span>Highest</span></td><td><span>Lowest</span></td><td><span>Average</span></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 1<span>Rate the cleanliness level of the hospital</span></a></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableMonth']['Question_1']['high']; ?></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableMonth']['Question_1']['low']; ?></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableMonth']['Question_1']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 2<span>Rate the staff friendliness</span></a></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableMonth']['Question_2']['high']; ?></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableMonth']['Question_2']['low']; ?></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableMonth']['Question_2']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 3<span>Were you updated regularly on the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableMonth']['Question_3']['high']; ?></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableMonth']['Question_3']['low']; ?></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableMonth']['Question_3']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 4<span>Were you involved in the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableMonth']['Question_4']['high']; ?></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableMonth']['Question_4']['low']; ?></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableMonth']['Question_4']['average']; ?></td>
+					    </tr>
+					</table>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+		        <div class="panel quarterly">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $hospitalData["Good Hope Hospital"]['networkFeedbacksQuarter']; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $hospitalData["Good Hope Hospital"]['networkFeedbacksCommentQuarter']; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $hospitalData["Good Hope Hospital"]['networkFeedbacksAverageQuarter']; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $hospitalData["Good Hope Hospital"]['networkFeedbacksRecommendQuarter']; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <table>
+					    <tr class="labels">
+					        <td></td><td><span>Highest</span></td><td><span>Lowest</span></td><td><span>Average</span></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 1<span>Rate the cleanliness level of the hospital</span></a></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableQuarter']['Question_1']['high']; ?></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableQuarter']['Question_1']['low']; ?></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableQuarter']['Question_1']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 2<span>Rate the staff friendliness</span></a></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableQuarter']['Question_2']['high']; ?></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableQuarter']['Question_2']['low']; ?></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableQuarter']['Question_2']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 3<span>Were you updated regularly on the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableQuarter']['Question_3']['high']; ?></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableQuarter']['Question_3']['low']; ?></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableQuarter']['Question_3']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 4<span>Were you involved in the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableQuarter']['Question_4']['high']; ?></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableQuarter']['Question_4']['low']; ?></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableQuarter']['Question_4']['average']; ?></td>
+					    </tr>
+					</table>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+		        <div class="panel lifetime">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $hospitalData["Good Hope Hospital"]['networkFeedbacksLifetime']; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $hospitalData["Good Hope Hospital"]['networkFeedbacksCommentLifetime']; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $hospitalData["Good Hope Hospital"]['networkFeedbacksAverageLifetime']; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $hospitalData["Good Hope Hospital"]['networkFeedbacksRecommendLifetime']; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <table>
+					    <tr class="labels">
+					        <td></td><td><span>Highest</span></td><td><span>Lowest</span></td><td><span>Average</span></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 1<span>Rate the cleanliness level of the hospital</span></a></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableLifetime']['Question_1']['high']; ?></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableLifetime']['Question_1']['low']; ?></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableLifetime']['Question_1']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 2<span>Rate the staff friendliness</span></a></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableLifetime']['Question_2']['high']; ?></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableLifetime']['Question_2']['low']; ?></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableLifetime']['Question_2']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 3<span>Were you updated regularly on the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableLifetime']['Question_3']['high']; ?></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableLifetime']['Question_3']['low']; ?></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableLifetime']['Question_3']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 4<span>Were you involved in the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableLifetime']['Question_4']['high']; ?></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableLifetime']['Question_4']['low']; ?></td>
+					        <td><?php echo $hospitalData["Good Hope Hospital"]['dataTableLifetime']['Question_4']['average']; ?></td>
+					    </tr>
+					</table>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+	        </div>
+        </section><!-- Good Hope Hospital -->
+        <section id="s-redditch" class="statistics">
+	        <ul class="statisticsNav clearfix">
+		        <li class="weekly active"><span>Weekly Overview</span></li>
+		        <li class="monthly"><span>Monthly Overview</span></li>
+		        <li class="quarterly"><span>Quarterly Overview</span></li>
+		        <li class="lifetime"><span>Lifetime Overview</span></li>
+	        </ul>
+	        <div class="statisticsContent">
+		        <div class="panel weekly active">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $hospitalData["Redditch Hospital"]['networkFeedbacksWeek']; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $hospitalData["Redditch Hospital"]['networkFeedbacksCommentWeek']; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $hospitalData["Redditch Hospital"]['networkFeedbacksAverageWeek']; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $hospitalData["Redditch Hospital"]['networkFeedbacksRecommendWeek']; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <table>
+					    <tr class="labels">
+					        <td></td><td><span>Highest</span></td><td><span>Lowest</span></td><td><span>Average</span></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 1<span>Rate the cleanliness level of the hospital</span></a></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableWeek']['Question_1']['high']; ?></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableWeek']['Question_1']['low']; ?></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableWeek']['Question_1']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 2<span>Rate the staff friendliness</span></a></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableWeek']['Question_2']['high']; ?></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableWeek']['Question_2']['low']; ?></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableWeek']['Question_2']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 3<span>Were you updated regularly on the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableWeek']['Question_3']['high']; ?></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableWeek']['Question_3']['low']; ?></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableWeek']['Question_3']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 4<span>Were you involved in the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableWeek']['Question_4']['high']; ?></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableWeek']['Question_4']['low']; ?></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableWeek']['Question_4']['average']; ?></td>
+					    </tr>
+					</table>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+		        <div class="panel monthly">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $hospitalData["Redditch Hospital"]['networkFeedbacksMonth']; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $hospitalData["Redditch Hospital"]['networkFeedbacksCommentMonth']; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $hospitalData["Redditch Hospital"]['networkFeedbacksAverageMonth']; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $hospitalData["Redditch Hospital"]['networkFeedbacksRecommendMonth']; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <table>
+					    <tr class="labels">
+					        <td></td><td><span>Highest</span></td><td><span>Lowest</span></td><td><span>Average</span></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 1<span>Rate the cleanliness level of the hospital</span></a></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableMonth']['Question_1']['high']; ?></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableMonth']['Question_1']['low']; ?></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableMonth']['Question_1']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 2<span>Rate the staff friendliness</span></a></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableMonth']['Question_2']['high']; ?></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableMonth']['Question_2']['low']; ?></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableMonth']['Question_2']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 3<span>Were you updated regularly on the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableMonth']['Question_3']['high']; ?></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableMonth']['Question_3']['low']; ?></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableMonth']['Question_3']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 4<span>Were you involved in the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableMonth']['Question_4']['high']; ?></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableMonth']['Question_4']['low']; ?></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableMonth']['Question_4']['average']; ?></td>
+					    </tr>
+					</table>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+		        <div class="panel quarterly">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $hospitalData["Redditch Hospital"]['networkFeedbacksQuarter']; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $hospitalData["Redditch Hospital"]['networkFeedbacksCommentQuarter']; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $hospitalData["Redditch Hospital"]['networkFeedbacksAverageQuarter']; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $hospitalData["Redditch Hospital"]['networkFeedbacksRecommendQuarter']; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <table>
+					    <tr class="labels">
+					        <td></td><td><span>Highest</span></td><td><span>Lowest</span></td><td><span>Average</span></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 1<span>Rate the cleanliness level of the hospital</span></a></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableQuarter']['Question_1']['high']; ?></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableQuarter']['Question_1']['low']; ?></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableQuarter']['Question_1']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 2<span>Rate the staff friendliness</span></a></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableQuarter']['Question_2']['high']; ?></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableQuarter']['Question_2']['low']; ?></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableQuarter']['Question_2']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 3<span>Were you updated regularly on the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableQuarter']['Question_3']['high']; ?></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableQuarter']['Question_3']['low']; ?></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableQuarter']['Question_3']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 4<span>Were you involved in the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableQuarter']['Question_4']['high']; ?></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableQuarter']['Question_4']['low']; ?></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableQuarter']['Question_4']['average']; ?></td>
+					    </tr>
+					</table>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+		        <div class="panel lifetime">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $hospitalData["Redditch Hospital"]['networkFeedbacksLifetime']; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $hospitalData["Redditch Hospital"]['networkFeedbacksCommentLifetime']; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $hospitalData["Redditch Hospital"]['networkFeedbacksAverageLifetime']; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $hospitalData["Redditch Hospital"]['networkFeedbacksRecommendLifetime']; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <table>
+					    <tr class="labels">
+					        <td></td><td><span>Highest</span></td><td><span>Lowest</span></td><td><span>Average</span></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 1<span>Rate the cleanliness level of the hospital</span></a></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableLifetime']['Question_1']['high']; ?></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableLifetime']['Question_1']['low']; ?></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableLifetime']['Question_1']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 2<span>Rate the staff friendliness</span></a></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableLifetime']['Question_2']['high']; ?></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableLifetime']['Question_2']['low']; ?></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableLifetime']['Question_2']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 3<span>Were you updated regularly on the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableLifetime']['Question_3']['high']; ?></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableLifetime']['Question_3']['low']; ?></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableLifetime']['Question_3']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 4<span>Were you involved in the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableLifetime']['Question_4']['high']; ?></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableLifetime']['Question_4']['low']; ?></td>
+					        <td><?php echo $hospitalData["Redditch Hospital"]['dataTableLifetime']['Question_4']['average']; ?></td>
+					    </tr>
+					</table>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+	        </div>
+        </section><!-- Redditch Hospital -->
+        <section id="s-hereford" class="statistics">
+	        <ul class="statisticsNav clearfix">
+		        <li class="weekly active"><span>Weekly Overview</span></li>
+		        <li class="monthly"><span>Monthly Overview</span></li>
+		        <li class="quarterly"><span>Quarterly Overview</span></li>
+		        <li class="lifetime"><span>Lifetime Overview</span></li>
+	        </ul>
+	        <div class="statisticsContent">
+		        <div class="panel weekly active">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $hospitalData["Hereford Hospital"]['networkFeedbacksWeek']; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $hospitalData["Hereford Hospital"]['networkFeedbacksCommentWeek']; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $hospitalData["Hereford Hospital"]['networkFeedbacksAverageWeek']; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $hospitalData["Hereford Hospital"]['networkFeedbacksRecommendWeek']; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <table>
+					    <tr class="labels">
+					        <td></td><td><span>Highest</span></td><td><span>Lowest</span></td><td><span>Average</span></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 1<span>Rate the cleanliness level of the hospital</span></a></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableWeek']['Question_1']['high']; ?></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableWeek']['Question_1']['low']; ?></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableWeek']['Question_1']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 2<span>Rate the staff friendliness</span></a></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableWeek']['Question_2']['high']; ?></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableWeek']['Question_2']['low']; ?></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableWeek']['Question_2']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 3<span>Were you updated regularly on the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableWeek']['Question_3']['high']; ?></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableWeek']['Question_3']['low']; ?></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableWeek']['Question_3']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 4<span>Were you involved in the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableWeek']['Question_4']['high']; ?></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableWeek']['Question_4']['low']; ?></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableWeek']['Question_4']['average']; ?></td>
+					    </tr>
+					</table>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+		        <div class="panel monthly">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $hospitalData["Hereford Hospital"]['networkFeedbacksMonth']; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $hospitalData["Hereford Hospital"]['networkFeedbacksCommentMonth']; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $hospitalData["Hereford Hospital"]['networkFeedbacksAverageMonth']; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $hospitalData["Hereford Hospital"]['networkFeedbacksRecommendMonth']; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <table>
+					    <tr class="labels">
+					        <td></td><td><span>Highest</span></td><td><span>Lowest</span></td><td><span>Average</span></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 1<span>Rate the cleanliness level of the hospital</span></a></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableMonth']['Question_1']['high']; ?></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableMonth']['Question_1']['low']; ?></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableMonth']['Question_1']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 2<span>Rate the staff friendliness</span></a></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableMonth']['Question_2']['high']; ?></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableMonth']['Question_2']['low']; ?></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableMonth']['Question_2']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 3<span>Were you updated regularly on the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableMonth']['Question_3']['high']; ?></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableMonth']['Question_3']['low']; ?></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableMonth']['Question_3']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 4<span>Were you involved in the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableMonth']['Question_4']['high']; ?></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableMonth']['Question_4']['low']; ?></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableMonth']['Question_4']['average']; ?></td>
+					    </tr>
+					</table>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+		        <div class="panel quarterly">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $hospitalData["Hereford Hospital"]['networkFeedbacksQuarter']; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $hospitalData["Hereford Hospital"]['networkFeedbacksCommentQuarter']; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $hospitalData["Hereford Hospital"]['networkFeedbacksAverageQuarter']; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $hospitalData["Hereford Hospital"]['networkFeedbacksRecommendQuarter']; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <table>
+					    <tr class="labels">
+					        <td></td><td><span>Highest</span></td><td><span>Lowest</span></td><td><span>Average</span></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 1<span>Rate the cleanliness level of the hospital</span></a></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableQuarter']['Question_1']['high']; ?></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableQuarter']['Question_1']['low']; ?></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableQuarter']['Question_1']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 2<span>Rate the staff friendliness</span></a></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableQuarter']['Question_2']['high']; ?></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableQuarter']['Question_2']['low']; ?></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableQuarter']['Question_2']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 3<span>Were you updated regularly on the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableQuarter']['Question_3']['high']; ?></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableQuarter']['Question_3']['low']; ?></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableQuarter']['Question_3']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 4<span>Were you involved in the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableQuarter']['Question_4']['high']; ?></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableQuarter']['Question_4']['low']; ?></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableQuarter']['Question_4']['average']; ?></td>
+					    </tr>
+					</table>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+		        <div class="panel lifetime">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $hospitalData["Hereford Hospital"]['networkFeedbacksLifetime']; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $hospitalData["Hereford Hospital"]['networkFeedbacksCommentLifetime']; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $hospitalData["Hereford Hospital"]['networkFeedbacksAverageLifetime']; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $hospitalData["Hereford Hospital"]['networkFeedbacksRecommendLifetime']; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <table>
+					    <tr class="labels">
+					        <td></td><td><span>Highest</span></td><td><span>Lowest</span></td><td><span>Average</span></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 1<span>Rate the cleanliness level of the hospital</span></a></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableLifetime']['Question_1']['high']; ?></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableLifetime']['Question_1']['low']; ?></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableLifetime']['Question_1']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 2<span>Rate the staff friendliness</span></a></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableLifetime']['Question_2']['high']; ?></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableLifetime']['Question_2']['low']; ?></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableLifetime']['Question_2']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 3<span>Were you updated regularly on the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableLifetime']['Question_3']['high']; ?></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableLifetime']['Question_3']['low']; ?></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableLifetime']['Question_3']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 4<span>Were you involved in the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableLifetime']['Question_4']['high']; ?></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableLifetime']['Question_4']['low']; ?></td>
+					        <td><?php echo $hospitalData["Hereford Hospital"]['dataTableLifetime']['Question_4']['average']; ?></td>
+					    </tr>
+					</table>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+	        </div>
+        </section><!-- Hereford Hospital -->
+        <section id="s-birminghamChildrens" class="statistics">
+	        <ul class="statisticsNav clearfix">
+		        <li class="weekly active"><span>Weekly Overview</span></li>
+		        <li class="monthly"><span>Monthly Overview</span></li>
+		        <li class="quarterly"><span>Quarterly Overview</span></li>
+		        <li class="lifetime"><span>Lifetime Overview</span></li>
+	        </ul>
+	        <div class="statisticsContent">
+		        <div class="panel weekly active">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $hospitalData["Birmingham Children's Hospital"]['networkFeedbacksWeek']; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $hospitalData["Birmingham Children's Hospital"]['networkFeedbacksCommentWeek']; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $hospitalData["Birmingham Children's Hospital"]['networkFeedbacksAverageWeek']; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $hospitalData["Birmingham Children's Hospital"]['networkFeedbacksRecommendWeek']; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <table>
+					    <tr class="labels">
+					        <td></td><td><span>Highest</span></td><td><span>Lowest</span></td><td><span>Average</span></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 1<span>Rate the cleanliness level of the hospital</span></a></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableWeek']['Question_1']['high']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableWeek']['Question_1']['low']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableWeek']['Question_1']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 2<span>Rate the staff friendliness</span></a></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableWeek']['Question_2']['high']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableWeek']['Question_2']['low']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableWeek']['Question_2']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 3<span>Were you updated regularly on the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableWeek']['Question_3']['high']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableWeek']['Question_3']['low']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableWeek']['Question_3']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 4<span>Were you involved in the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableWeek']['Question_4']['high']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableWeek']['Question_4']['low']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableWeek']['Question_4']['average']; ?></td>
+					    </tr>
+					</table>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+		        <div class="panel monthly">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $hospitalData["Birmingham Children's Hospital"]['networkFeedbacksMonth']; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $hospitalData["Birmingham Children's Hospital"]['networkFeedbacksCommentMonth']; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $hospitalData["Birmingham Children's Hospital"]['networkFeedbacksAverageMonth']; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $hospitalData["Birmingham Children's Hospital"]['networkFeedbacksRecommendMonth']; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <table>
+					    <tr class="labels">
+					        <td></td><td><span>Highest</span></td><td><span>Lowest</span></td><td><span>Average</span></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 1<span>Rate the cleanliness level of the hospital</span></a></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableMonth']['Question_1']['high']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableMonth']['Question_1']['low']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableMonth']['Question_1']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 2<span>Rate the staff friendliness</span></a></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableMonth']['Question_2']['high']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableMonth']['Question_2']['low']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableMonth']['Question_2']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 3<span>Were you updated regularly on the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableMonth']['Question_3']['high']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableMonth']['Question_3']['low']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableMonth']['Question_3']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 4<span>Were you involved in the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableMonth']['Question_4']['high']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableMonth']['Question_4']['low']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableMonth']['Question_4']['average']; ?></td>
+					    </tr>
+					</table>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+		        <div class="panel quarterly">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $hospitalData["Birmingham Children's Hospital"]['networkFeedbacksQuarter']; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $hospitalData["Birmingham Children's Hospital"]['networkFeedbacksCommentQuarter']; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $hospitalData["Birmingham Children's Hospital"]['networkFeedbacksAverageQuarter']; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $hospitalData["Birmingham Children's Hospital"]['networkFeedbacksRecommendQuarter']; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <table>
+					    <tr class="labels">
+					        <td></td><td><span>Highest</span></td><td><span>Lowest</span></td><td><span>Average</span></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 1<span>Rate the cleanliness level of the hospital</span></a></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableQuarter']['Question_1']['high']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableQuarter']['Question_1']['low']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableQuarter']['Question_1']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 2<span>Rate the staff friendliness</span></a></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableQuarter']['Question_2']['high']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableQuarter']['Question_2']['low']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableQuarter']['Question_2']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 3<span>Were you updated regularly on the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableQuarter']['Question_3']['high']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableQuarter']['Question_3']['low']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableQuarter']['Question_3']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 4<span>Were you involved in the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableQuarter']['Question_4']['high']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableQuarter']['Question_4']['low']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableQuarter']['Question_4']['average']; ?></td>
+					    </tr>
+					</table>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+		        <div class="panel lifetime">
+			        <div class="data">
+				        <div class="feedback"><span class="number"><?php echo $hospitalData["Birmingham Children's Hospital"]['networkFeedbacksLifetime']; ?></span><p>feedbacks</p><span class="details"></span></div>
+				        <div class="aveScore"><span class="number"><?php echo $hospitalData["Birmingham Children's Hospital"]['networkFeedbacksCommentLifetime']; ?></span><p>feedbacks</p><span class="details">with comments</span></div>
+				        <div class="lowScore"><span class="number"><?php echo $hospitalData["Birmingham Children's Hospital"]['networkFeedbacksAverageLifetime']; ?></span><p>average score</p><span class="details"></span></div>
+				        <div class="comments"><span class="number"><?php echo $hospitalData["Birmingham Children's Hospital"]['networkFeedbacksRecommendLifetime']; ?><small>&#37;</small></span><p>recommend</p><span class="details"></span></div>
+			        </div>
+			        <table>
+					    <tr class="labels">
+					        <td></td><td><span>Highest</span></td><td><span>Lowest</span></td><td><span>Average</span></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 1<span>Rate the cleanliness level of the hospital</span></a></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableLifetime']['Question_1']['high']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableLifetime']['Question_1']['low']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableLifetime']['Question_1']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 2<span>Rate the staff friendliness</span></a></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableLifetime']['Question_2']['high']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableLifetime']['Question_2']['low']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableLifetime']['Question_2']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 3<span>Were you updated regularly on the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableLifetime']['Question_3']['high']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableLifetime']['Question_3']['low']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableLifetime']['Question_3']['average']; ?></td>
+					    </tr>
+					    <tr>
+					        <td><a href="#">Question 4<span>Were you involved in the care of your baby?</span></a></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableLifetime']['Question_4']['high']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableLifetime']['Question_4']['low']; ?></td>
+					        <td><?php echo $hospitalData["Birmingham Children's Hospital"]['dataTableLifetime']['Question_4']['average']; ?></td>
+					    </tr>
+					</table>
+			        <aside><a href="/download-csv.php">download CSV</a></aside>
+		        </div>
+	        </div>
+        </section><!-- Birmingham Children's Hospital -->
+        <div class="hospitals">
+	    	<div id="h-birminghamWomens" class="hospital one active">
+	    		<a>
+	    			<p>Birmingham <br/>Women's <br/>Hospital</p>
+	    		</a>
+	    		<span>Close</span>
+	    	</div><!-- hospital -->
+	    	<div id="h-city" class="hospital two active">
+	    		<a>
+		    		<p>City <br/>Hospital</p>
+		    	</a>
+	    		<span>Close</span>
+	    	</div><!-- hospital -->
+	    	<div id="h-heartlands" class="hospital three active">
+	    		<a>
+		    		<p>Heartlands <br/>Hospital</p>
+		    	</a>
+	    		<span>Close</span>
+	    	</div><!-- hospital -->
+	    	<div id="h-worcester" class="hospital four active">
+	    		<a>
+		    		<p>Worcester <br/>Hospital</p>
+		    	</a>
+	    		<span>Close</span>
+	    	</div><!-- hospital -->
+	    	<div id="h-goodHope" class="hospital five active">
+	    		<a>
+		    		<p>Good Hope <br/>Hospital</p>
+		    	</a>
+	    		<span>Close</span>
+	    	</div><!-- hospital -->
+	    	<div id="h-redditch" class="hospital six active">
+	    		<a>
+		    		<p>Redditch <br/>Hospital</p>
+		    	</a>
+	    		<span>Close</span>
+	    	</div><!-- hospital -->
+	    	<div id="h-hereford" class="hospital seven active">
+	    		<a>
+		    		<p>Hereford <br/>Hospital</p>
+		    	</a>
+	    		<span>Close</span>
+	    	</div><!-- hospital -->
+	    	<div id="h-birminghamChildrens" class="hospital eight active">
+	    		<a>
+		    		<p>Birmingham <br/>Children's <br/>Hospital</p>
+		    	</a>
+	    		<span>Close</span>
+	    	</div><!-- hospital -->
+	    </div><!-- hospitals -->
+    </div>
+    <div class="viewFeedback clearfix"> 
+        <h2>Latest feedback from the questionnaire comments option</h2>
+        <a href="/feedback/">View overall hospital feedback</a>
+    </div>
+    <div class="feedbackBoxes clearfix">
+    	<?php foreach($this->latestFeedback as $latest): ?>
+	        <div class="feedbackBox">
+		        <div class="feedbackBoxContent">
+		        	<h3>Positive or good things the unit does:</h3>
+		        	<p><?php echo htmlentities($latest->Question_6); ?></p>
+		        	<h3>Suggest areas of improvement:</h3>
+		        	<p><?php echo htmlentities($latest->Question_7); ?></p>
+		        </div>
+		        <aside class="feedbackBoxInfo clearfix">
+			        <span class="date"><?php echo date('jS F Y',strtotime(htmlentities($latest->Date))); ?></span>
+			        <?php $recommend = htmlentities($latest->Question_5); ?>
+			        <?php if ( $recommend == 'Yes' ) { ?>
+				        <span class="recommend">Recommended</span>
+				    <?php } ?>
+			        <!--<span class="user">User 2013412</span>-->
+		        </aside>
+		        <span></span>
+	        </div>
+	    <?php endforeach; ?>
+    </div> 
+</div><!-- wrapper -->   
+<footer class="dashboardFooter">
+    <div class="wrapper">Copyright &copy;<?php echo date('Y'); ?> Southern West Midlands Maternity and Newborn Network. All right reserved.<span class="right">Web Design & App Development by <a href="http://www.clicky.co.uk">Clicky Media</a></span></div>
+</footer>  
