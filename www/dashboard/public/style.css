@@ -96,7 +96,7 @@ body.holding { background: url(images/holding-bg.jpg) no-repeat #322a2e; -webkit
 .statistics.default { display: block; }
 .statistics .statisticsNav { width: auto; height: 50px; margin: 0; padding: 0; list-style: none; background: url(images/statisticsNavShadow.png) bottom left repeat-x #4080BD; }
 
-/*new start*/
+/* Individual Hospital Colors */
 #s-queensBurton .statisticsNav { background: url(images/statisticsNavShadow.png) bottom left repeat-x #1a3566; }
 #s-queensBurton .statisticsNav > li.active { color: #1a3566; }
 #s-queensBurton .statisticsContent .panel .data > div { color: #1a3566; }
@@ -118,43 +118,22 @@ body.holding { background: url(images/holding-bg.jpg) no-repeat #322a2e; -webkit
 #s-leicesterRoyal .statisticsNav { background: url(images/statisticsNavShadow.png) bottom left repeat-x #8b4583; }
 #s-leicesterRoyal .statisticsNav > li.active { color: #8b4583; }
 #s-leicesterRoyal .statisticsContent .panel .data > div { color: #8b4583; }
+#s-northamptonGeneral .statisticsNav { background: url(images/statisticsNavShadow.png) bottom left repeat-x #5166b9; }
+#s-northamptonGeneral .statisticsNav > li.active { color: #5166b9; }
+#s-northamptonGeneral .statisticsContent .panel .data > div { color: #5166b9; }
+#s-queensMedicalCentre .statisticsNav { background: url(images/statisticsNavShadow.png) bottom left repeat-x #6d8e0b; }
+#s-queensMedicalCentre .statisticsNav > li.active { color: #6d8e0b; }
+#s-queensMedicalCentre .statisticsContent .panel .data > div { color: #6d8e0b; }
+#s-nottinghamCity .statisticsNav { background: url(images/statisticsNavShadow.png) bottom left repeat-x #3c907d; }
+#s-nottinghamCity .statisticsNav > li.active { color: #3c907d; }
+#s-nottinghamCity .statisticsContent .panel .data > div { color: #3c907d; }
+#s-pilgrimBoston .statisticsNav { background: url(images/statisticsNavShadow.png) bottom left repeat-x #c34768; }
+#s-pilgrimBoston .statisticsNav > li.active { color: #c34768; }
+#s-pilgrimBoston .statisticsContent .panel .data > div { color: #c34768; }
 
-/*NEED DIFFERENT COLORS?*/
-#s-northamptonGeneral .statisticsNav { background: url(images/statisticsNavShadow.png) bottom left repeat-x #1b64ab; }
-#s-northamptonGeneral .statisticsNav > li.active { color: #1b64ab; }
-#s-northamptonGeneral .statisticsContent .panel .data > div { color: #1b64ab; }
-
-#s-queensMedicalCentre .statisticsNav { background: url(images/statisticsNavShadow.png) bottom left repeat-x #2C6EAE; }
-#s-queensMedicalCentre .statisticsNav > li.active { color: #2C6EAE; }
-#s-queensMedicalCentre .statisticsContent .panel .data > div { color: #2C6EAE; }
-#s-nottinghamCity .statisticsNav { background: url(images/statisticsNavShadow.png) bottom left repeat-x #74afaf; }
-#s-nottinghamCity .statisticsNav > li.active { color: #74afaf; }
-#s-nottinghamCity .statisticsContent .panel .data > div { color: #74afaf; }
-#s-pilgrimBoston .statisticsNav { background: url(images/statisticsNavShadow.png) bottom left repeat-x #beca59; }
-#s-pilgrimBoston .statisticsNav > li.active { color: #beca59; }
-#s-pilgrimBoston .statisticsContent .panel .data > div { color: #beca59; }
-
-/*new end*/
-
-#s-birminghamWomens .statisticsNav { background: url(images/statisticsNavShadow.png) bottom left repeat-x #1a3566; }
-#s-city .statisticsNav { background: url(images/statisticsNavShadow.png) bottom left repeat-x #408ac9; }
-#s-heartlands .statisticsNav { background: url(images/statisticsNavShadow.png) bottom left repeat-x #74afaf; }
-#s-worcester .statisticsNav { background: url(images/statisticsNavShadow.png) bottom left repeat-x #beca59; }
-#s-goodHope .statisticsNav { background: url(images/statisticsNavShadow.png) bottom left repeat-x #d5a007; }
-#s-redditch .statisticsNav { background: url(images/statisticsNavShadow.png) bottom left repeat-x #e54a66; }
-#s-hereford .statisticsNav { background: url(images/statisticsNavShadow.png) bottom left repeat-x #8b4583; }
-#s-birminghamChildrens .statisticsNav { background: url(images/statisticsNavShadow.png) bottom left repeat-x #1a3566; }
 .statistics .statisticsNav > li { width: 25%; height: inherit; display: block; float: left; text-align: center; font-size: 16px; line-height: 1em; font-weight: 300; cursor: pointer; color: #fff; -o-transition: all .5s ease; transition: all .5s ease; -webkit-transition: all .5s ease; -moz-transition: all .5s ease; }
 .statistics .statisticsNav > li:hover { background: rgba(0,0,0,0.15); }
 .statistics .statisticsNav > li.active { background: #fff; color: #4080BD; }
-#s-birminghamWomens .statisticsNav > li.active { color: #1a3566; }
-#s-city .statisticsNav > li.active { color: #408ac9; }
-#s-heartlands .statisticsNav > li.active { color: #74afaf; }
-#s-worcester .statisticsNav > li.active { color: #beca59; }
-#s-goodHope .statisticsNav > li.active { color: #d5a007; }
-#s-redditch .statisticsNav > li.active { color: #e54a66; }
-#s-hereford .statisticsNav > li.active { color: #8b4583; }
-#s-birminghamChildrens .statisticsNav > li.active { color: #4D297A; }
 .statistics .statisticsNav > li > span { width: inherit; height: inherit; display: table-cell; vertical-align: middle; }
 .statistics .statisticsContent { width: inherit; height: 396px; overflow: hidden; }
 .statistics .statisticsContent .panel { width: inherit; height: inherit; display: none; position: relative; }
@@ -165,14 +144,6 @@ body.holding { background: url(images/holding-bg.jpg) no-repeat #322a2e; -webkit
 .statistics.default .statisticsContent .panel .data > div.aveScore { color: #74A7A7; }
 .statistics.default .statisticsContent .panel .data > div.lowScore { color: #B6C259; }
 .statistics.default .statisticsContent .panel .data > div.comments { color: #4082C1; }
-#s-birminghamWomens .statisticsContent .panel .data > div { color: #1a3566; }
-#s-city .statisticsContent .panel .data > div { color: #408ac9; }
-#s-heartlands .statisticsContent .panel .data > div { color: #74afaf; }
-#s-worcester .statisticsContent .panel .data > div { color: #beca59; }
-#s-goodHope .statisticsContent .panel .data > div { color: #d5a007; }
-#s-redditch .statisticsContent .panel .data > div { color: #e54a66; }
-#s-hereford .statisticsContent .panel .data > div { color: #8b4583; }
-#s-birminghamChildrens .statisticsContent .panel .data > div { color: #1a3566; }
 .statistics .statisticsContent .panel .data > div .number { font-size: 90px; font-weight: 600; letter-spacing: -3px; line-height: 1em; }
 .statistics .statisticsContent .panel .data > div .number small { font-size: 30px; line-height: 0px; display: inline; }
 .statistics .statisticsContent .panel .data > div p { margin: 3px 0 4px 0; padding: 0; font-size: 18px; line-height: 1em; font-weight: 300; }
@@ -213,11 +184,10 @@ body.holding { background: url(images/holding-bg.jpg) no-repeat #322a2e; -webkit
 .hospitals .hospital.five.active a { background-color: #d5a007; }
 .hospitals .hospital.six.active a { background-color: #e54a66; }
 .hospitals .hospital.seven.active a { background-color: #8b4583; }
-.hospitals .hospital.eight.active a { background-color: #1b64ab; }
-
-.hospitals .hospital.nine.active a { background-color: #1a3566; }
-.hospitals .hospital.ten.active a { background-color: #1a3566; }
-.hospitals .hospital.eleven.active a { background-color: #1a3566; }
+.hospitals .hospital.eight.active a { background-color: #5166b9; }
+.hospitals .hospital.nine.active a { background-color: #6d8e0b; }
+.hospitals .hospital.ten.active a { background-color: #3c907d; }
+.hospitals .hospital.eleven.active a { background-color: #c34768; }
 
 .viewFeedback { padding: 20px 0 33px 0; }
 .viewFeedback h2 { margin: 0; padding: 0; font-size: 23px; line-height: 1em; font-weight: 300; color: #808080; float: left; }
