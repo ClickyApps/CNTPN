@@ -221,19 +221,21 @@
 					var question_4 = $('#question_4').val();
 					var question_5 = $('#question_5').val();
 					var question_6 = $('#question_6').val();
+					var a = ')5n*(eYe;]m#M*)%[8?v';
+					console.log(a);
 					$.ajax({
 					  type: "POST",
 					  url: 'http://dashboard.cntpn.clicky.co.uk/process-feedback.php',
-					  data: { hospital : hospital, question_1 : question_1, question_2 : question_2, question_3 : question_3, question_4 : question_4, question_5 : question_5, question_6 : question_6 },
+					  data: { a : a, hospital : hospital, question_1 : question_1, question_2 : question_2, question_3 : question_3, question_4 : question_4, question_5 : question_5, question_6 : question_6 },
 					  success: function(returnData){
-					  	if ( returnData == 'Error' ) {
-						  	alert('Giving feedback requires an internet connection.');
-						} else {
+					  	if ( returnData == 'Success' ) {
 							$('#feedbackForm').fadeOut('fast');
 							$('.feedback .questions > p').text('Thanks for giving us feedback. You will now be taken back to the hospital information.');
 							setTimeout(function() {
 								window.location.replace('hospitals/' + chosenHospitalClass + '.html');
 						    }, 3000);
+						} else {
+						  	alert('Giving feedback requires an internet connection. If you have an internet connection please contact the administrator.');
 					  	}
 				      },
 				      error:function(returnData){

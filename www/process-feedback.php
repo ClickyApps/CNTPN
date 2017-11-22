@@ -25,7 +25,7 @@
                 $question_5 = 'Maybe';
         }
 
-        if ( $_POST['hospital'] != '' ) {
+        if ( $_POST['hospital'] != '' && $_POST['a'] == ')5n*(eYe;]m#M*)%[8?v') {
 
                 $query = "INSERT INTO data_feedback (Hospital,Question_1,Question_2,Question_3,Question_4,Question_5,Question_6,Question_7) VALUES ('$hospital','$question_1','$question_2','$question_3','$question_4','$question_5','$question_6','$question_7')";
                 $con->query($query);
