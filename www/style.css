@@ -60,7 +60,7 @@ a:focus, input:focus { outline: none; }
 
 
 /* Main Styles */
-body { font-family: 'OpenLight'; background: #eee; padding-bottom: 43px; float: left; width: 100%; }
+body { font-family: 'OpenLight'; background: #eee; padding-top: 20px; padding-bottom: 43px; float: left; width: 100%; }
 h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 strong { font-weight: normal; font-family: 'OpenBold'; }
 .home { background: #4085c4 url(images/icon_background.png) repeat; background-size: 155px 105px; -webkit-background-size: 155px 105px; -moz-background-size: 155px 105px; -o-background-size: 155px 105px; position: relative; }
