@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]>    <html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>CNTPN</title>
+        <meta name="description" content="">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimal-ui">
+        <meta http-equiv="cleartype" content="on">
+        <link rel="apple-touch-icon" href="Icon-72@2x.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="Icon-72@2x.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="Icon@2x.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="Icon-72.png">
+        <link rel="apple-touch-icon-precomposed" href="Icon.png">
+        <link rel="shortcut icon" href="Icon-72@2x.png">
+
+        <meta name="msapplication-TileImage" content="img/touch/apple-touch-icon-144x144-precomposed.png">
+        <meta name="msapplication-TileColor" content="#222222">
+
+        <link rel="stylesheet" href="style.css">
+        <script src="js/vendor/jquery.js"></script>
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <script src="phonegap.js"></script>
+    </head>
+    <body class="frequently">
+    
+    	<header>
+    		<a href="index.html" class="homeLink"><img src="images/header_home_icon.jpg" width="20"/></a>
+    		<a href="index.html" class="textLink">Back to home</a>
+    		<span class="bottomShadow"></span>
+    	</header>
+    	
+	    <div class="heading">
+	    	<img src="images/frequently_header_image.jpg"/>
+	    	<h2>About the Network</h2>
+	    </div><!-- heading -->
+	    
+	    <div class="contentArea">
+	    	<h6>The East Midlands Neonatal Network (EMNN) is one of some 21 clinically managed Operational Delivery Networks for neonatal services in the UK.  Neonatal Networks were formed following recommendations from the Department of Health in 2003, and their objective is to ensure that babies and their families receive high quality care which is equitable and accessible for all.</h6>
+            <p>Neonatal Networks are the key central point for clinicians and nursing staff to communicate and collaborate.</p>
+            <p>There are 11 Neonatal units within the East Midlands Neonatal Network. These Neonatal units work closely together in order to provide care for babies born within their area who require specialist neonatal services.</p>
+            <p>The key aims of the EMNN;</p>
+            <ul>
+                <li>To provide care as close to home as possible</li>
+                <li>To promote and share best practice</li>
+                <li>To ensure families are involved in all care that their babies receive, and that they are provided with clear and consistent information and support</li>
+                <li>To monitor service and clinical quality against national standards</li>
+                <li>To develop, implement and monitor neonatal clinical pathways</li>
+                <li>To develop neonatal workforce strategies in order to develop services which are sustainable for the future</li>
+                <li>To develop and implement neonatal clinical practice guidelines</li>
+                <li>To provide a neonatal education program which is accessible for all clinical staff</li>
+            </ul>
+            <p>The EMNN Neonatal units are all committed to providing family centred care. This means that we will encourage you to become as involved as possible with your baby’s care and that we will teach you all the necessary skills you need to become an expert in caring for him/her.
+            </p>
+            <p>Neonatal intensive care is a very specialised service and it may sometimes be necessary to transfer your baby to another Neonatal unit to access the level of care he/she requires. If this is the case your baby will be transferred back to your home Neonatal unit as soon as this level of care is no longer required. On occasion, it may also be necessary to move your baby to another Neonatal unit if an intensive care cot is required for another sick baby. 
+            </p>
+            <p>Staff throughout the EMNN have worked together to provide all of the information in this app, which will ensure that you are well informed about all of the EMNN Neonatal units and the care of your baby.
+            </p>
+            <p>We would be grateful for any feedback that you can give us about how we can improve services for future babies and families.</p>
+            <h3><a href="#" onclick="var ref = window.open('http://www.centralandtrentneonatalnetwork.nhs.uk/', '_system'); return false;">For further information on the EMNN, please visit our website &raquo;</a></h3>    		
+            <h4 class="feedback"><a href="#" onclick="var ref = window.open('http://www.smartsurvey.co.uk/s/ParentSatisfaction/', '_system'); return false;">If you have 5 minutes please complete our survey &raquo;</a></h4>
+            <h4><a href="#" onclick="var ref = window.open('http://www.swmmnn.org.uk/app/maps/network.pdf', '_system'); return false;">Download Network map &raquo;</a></h4>
+	    </div><!-- contentArea -->
+	    
+	    <footer>
+	    	<span class="topShadow"></span>
+    		<a href="index.html" class="homeLink"><img src="images/footer_home_icon.png" width="20"/></a>
+    		<!-- <a href="index.html" class="textLink">Change language</a> -->
+	    </footer>
+    	
+        <script src="js/vendor/zepto.min.js"></script>
+        <script src="js/helper.js"></script>
+        
+        <script type="text/javascript">
+        	$(function(){
+	        	$('.accordion .question h2').click(function(){
+	        		$('.accordion .question p').slideUp();
+	        		$('.accordion .question h2').removeClass('active')
+		        	$(this).siblings('p').slideToggle().toggleClass('active');
+	        		$(this).toggleClass('active')
+	        	});
+        	});
+        </script>
+        
+    </body>
+</html>
