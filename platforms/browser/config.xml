@@ -12,7 +12,7 @@
             <string>UIInterfaceOrientationLandscapeOmg</string>
         </array>
     </gap:config-file>
-    <gap:plugin name="org.apache.cordova.inappbrowser" version="0.3.3" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" version="1.7.1" />
     <gap:plugin name="com.phonegap.plugin.statusbar" version="1.1.0" />
     <gap:config-file parent="UIStatusBarHidden" platform="ios">
         <true />
