@@ -1,3 +1,5 @@
+
+
 $(function(){
 	
 	// Make Tabs Work
@@ -32,10 +34,25 @@ $(function(){
     });
     
     // Set Width of Arrow on Tab
-    var tabWidth = $('footer.tabs a.tab').width() + 4;
-    tabWidth = tabWidth / 2;
-    $('footer.tabs a.tab span').each(function(){
-    	$(this).css({'border-left-width':tabWidth,'border-right-width':tabWidth});
+    function tabResize(){
+        var tabWidth = $('footer.tabs a.tab').width() + 4;
+        tabWidth = tabWidth / 2;
+
+        $('footer.tabs a.tab span').each(function(){
+            $(this).css({'border-left-width':tabWidth,'border-right-width':tabWidth});
+        });
+    }
+
+    window.addEventListener("orientationchange", function(){
+        tabResize();
     });
-    	
+
+    window.addEventListener("resize", function(){
+        tabResize();
+    });
+
+    window.addEventListener("load", function(){
+        tabResize();
+    });
+
 });
