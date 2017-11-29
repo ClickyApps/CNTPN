@@ -107,6 +107,7 @@
 				var chosenHospital = localStorage.getItem('chosenHospital');
 				var chosenHospitalClass = chosenHospital.toLowerCase();
 				chosenHospitalClass = chosenHospitalClass.replace(/'/g,"");
+				chosenHospitalClass = chosenHospitalClass.replace(/,/g,"");
 				chosenHospitalClass = chosenHospitalClass.replace(/ /g,"-");
 	        	$('body.feedback').addClass(chosenHospitalClass);
 
