@@ -6,10 +6,10 @@
 	version     = "1.2.3">
 	
 	<!-- App Details That Are Shown on the iOS App Store -->
-	<name>CNTPN</name>
+	<name>East Midlands Neonatal ODN</name>
 	
 	<description>
-		Information about the Southern West Midlands Maternity and Newborn Network of hospitals. This app includes information for families of premature and sick babies, with key information about each hospital and unit available.
+		Information about the East Midlands Neonatal ODN Network of hospitals. This app includes information for families of premature and sick babies, with key information about each hospital and unit available.
 	</description>
 	
 	<!-- Set Author of Application -->

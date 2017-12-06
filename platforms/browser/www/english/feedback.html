@@ -3,7 +3,7 @@
 <!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
-        <title>CNTPN</title>
+        <title>EMNODN</title>
         <meta name="description" content="">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
@@ -107,6 +107,7 @@
 				var chosenHospital = localStorage.getItem('chosenHospital');
 				var chosenHospitalClass = chosenHospital.toLowerCase();
 				chosenHospitalClass = chosenHospitalClass.replace(/'/g,"");
+				chosenHospitalClass = chosenHospitalClass.replace(/,/g,"");
 				chosenHospitalClass = chosenHospitalClass.replace(/ /g,"-");
 	        	$('body.feedback').addClass(chosenHospitalClass);
 
