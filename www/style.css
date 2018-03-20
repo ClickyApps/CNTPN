@@ -162,7 +162,8 @@ footer.tabs a.tab.active span { position: absolute; top: -20px; left: 0; width: 
 
 .hospital-list .hospitals .hospital.about { background-color: #cccccc; }
 .hospital-list .hospitals .hospital.map { background: #cccccc url(images/hospital_list_map.png) no-repeat center center; background-size: 95px 78px; -webkit-background-size: 95px 78px; -moz-background-size: 95px 78px; -o-background-size: 95px 78px; }
-.hospital-list .hospitals .hospital.map p, .hospital-list .hospitals .hospital.about p {  margin-top: 23px; color: #808080; }
+.hospital-list .hospitals .hospital.map p, .hospital-list .hospitals .hospital.about p {  margin-top: 0px; color: #808080; }
+.hospital-list .hospitals .hospital.map .map_para { margin-top: 15px; }
 
 .hospitalContainer { float: left; width: 100%; height: 275px; position: relative; overflow: hidden; }
 .hospitalContainer > img { position: absolute; top: 0; left: 0; width: 100%; height: auto; z-index: 5; }
