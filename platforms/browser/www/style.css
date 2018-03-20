@@ -221,6 +221,7 @@ p.error { background: #fff; float: left; margin: 0; text-align: center; padding:
 .contentArea h4 a:hover { border-bottom: 1px dotted #2D7FAC; }
 .contentArea h4.google { background: url(images/hospital_google_maps_icon.png) no-repeat left center; }
 .contentArea h4.feedback { background: url(images/hospital_feedback_icon.png) no-repeat left center; }
+.contentArea h4.no_icon { background: none; padding-left: 0; }
 
 .hospital .contentArea strong { font-size: 14px; line-height: 21px; }
 .hospital .contentArea ul { margin-top: 0; margin-bottom: 20px; }
