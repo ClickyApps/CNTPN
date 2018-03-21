@@ -199,8 +199,8 @@ footer.tabs a.tab.active span { position: absolute; top: -20px; left: 0; width: 
 
 .hospitalContainer .title { position: absolute; bottom: 40px; left: 0; width: 88%; padding: 15px 6%; z-index: 10; background: rgba(0,0,0,0.5); }
 .hospitalContainer .title.nudge { bottom: 58px; }
-.hospitalContainer .title h1 { margin: 0; font-size: 19px; color: #fff; }
-.hospitalContainer .title h5 { margin: 4px 0 0 0; font-size: 13px; color: #fff; }
+.hospitalContainer .title h1 { margin: 0; font-size: 19px; color: #fff; margin-bottom: 4px; }
+.hospitalContainer .title h5 { margin: 0; font-size: 13px; color: #fff; }
 .hospitalContainer .details { position: absolute; bottom: 0; left: 0; width: 88%; padding: 12px 6%; z-index: 10; background: #000; }
 .hospitalContainer .details.two-row { display: flex; flex-direction: row; align-items: center; }
 .hospitalContainer .details.two-row .col-one { width: 61%; }
