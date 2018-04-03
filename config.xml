@@ -37,7 +37,8 @@
 	<plugin name="org.apache.cordova.inappbrowser" spec="0.6.0" source="npm" />
 	
 	<!-- Install Status Bar Control Plugin - Removes Status Bar in iOS 7 (Set Versions to Disallow Updates Which May Render Differently) -->
-	<gap:plugin name="com.phonegap.plugin.statusbar" version="1.1.0" />
+	<!-- <gap:plugin name="com.phonegap.plugin.statusbar" version="1.1.0" /> -->
+	<plugin name="com.phonegap.plugin.statusbar" spec="1.1.0" source="npm" />
 	<preference name="StatusBarOverlaysWebView" value="false" />
 	<gap:config-file platform="ios" parent="UIStatusBarHidden">
 	    <true/>
