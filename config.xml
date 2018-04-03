@@ -33,7 +33,8 @@
 	</gap:config-file>
 	
 	<!-- Install InAppBrowser Plugin (Set Versions to Disallow Updates Which May Render Differently) -->
-	<gap:plugin name="org.apache.cordova.inappbrowser" version="1.7.1" />
+	<!-- <gap:plugin name="org.apache.cordova.inappbrowser" version="1.7.1" /> -->
+	<plugin name="org.apache.cordova.inappbrowser" spec="0.6.0" source="npm" />
 	
 	<!-- Install Status Bar Control Plugin - Removes Status Bar in iOS 7 (Set Versions to Disallow Updates Which May Render Differently) -->
 	<gap:plugin name="com.phonegap.plugin.statusbar" version="1.1.0" />
