@@ -2,7 +2,7 @@
 <widget 
 	xmlns = "http://www.w3.org/ns/widgets"
 	xmlns:gap   = "http://phonegap.com/ns/1.0"
-	id          = "uk.org.swmmnn.app"
+	id          = "uk.org.emnodn.app"
 	version     = "1.2.3">
 	
 	<!-- App Details That Are Shown on the iOS App Store -->
