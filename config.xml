@@ -13,9 +13,11 @@
 	</description>
 	
 	<!-- Set Author of Application -->
-	<author href="http://www.clicky.co.uk" email="josh@clicky.co.uk">
+	<author href="http://www.clicky.co.uk" email="rich@clicky.co.uk">
 	  Clicky Media
 	</author>
+
+	<preference name="phonegap-version" value="cli-7.0.1" />
 	
 	<preference name="orientation" value="portrait"/><!-- Set Default Orientation -->
 	<preference name="target-device" value="universal"/><!-- Set Device Targeting -->
