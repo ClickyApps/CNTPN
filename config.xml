@@ -16,8 +16,6 @@
 	<author href="http://www.clicky.co.uk" email="rich@clicky.co.uk">
 	  Clicky Media
 	</author>
-
-	<preference name='pgb-builder-version' value='2' />
 	
 	<preference name="orientation" value="portrait"/><!-- Set Default Orientation -->
 	<preference name="target-device" value="universal"/><!-- Set Device Targeting -->
